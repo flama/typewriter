@@ -334,7 +334,7 @@ module Typewriter::Editable
       @attr_name, @raw_value = attr_name, raw_value
     end
 
-    def as_json(options)
+    def as_json
       @raw_value
     end
 
