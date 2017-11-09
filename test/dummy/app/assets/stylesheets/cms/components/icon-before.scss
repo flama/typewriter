@@ -1,0 +1,159 @@
+.icon-before {
+  &::before {
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 1ch;
+
+    content: '';
+    background-color: currentColor;
+  }
+
+  &.-bag::before {
+    @include mask-image(image_path('icones/bag.svg'));
+  }
+
+  &.-book::before {
+    width: 30px;
+    @include mask-image(image_path('icones/book.svg'));
+  }
+
+  &.-boxing::before {
+    width: 28px;
+    @include mask-image(image_path('icones/boxing.svg'));
+  }
+
+  &.-brain::before {
+    @include mask-image(image_path('icones/brain.svg'));
+  }
+
+  &.-bridge::before {
+    width: 30px;
+    @include mask-image(image_path('icones/bridge.svg'));
+  }
+
+  &.-brightness::before {
+    @include mask-image(image_path('icones/brightness.svg'));
+  }
+
+  &.-calendar::before {
+    @include mask-image(image_path('icones/calendar.svg'));
+  }
+
+  &.-compass::before {
+    @include mask-image(image_path('icones/compass.svg'));
+  }
+
+  &.-curious::before {
+    width: 26px;
+    @include mask-image(image_path('icones/curious.svg'));
+  }
+
+  &.-discuss::before {
+    width: 28px;
+    @include mask-image(image_path('icones/discuss.svg'));
+  }
+
+  &.-game::before {
+    @include mask-image(image_path('icones/game.svg'));
+  }
+
+  &.-genius::before {
+    width: 28px;
+    height: 28px;
+    @include mask-image(image_path('icones/genius.svg'));
+  }
+
+  &.-gift::before {
+    @include mask-image(image_path('icones/gift.svg'));
+  }
+
+  &.-hand-washing::before {
+    width: 22px;
+    height: 22px;
+    @include mask-image(image_path('icones/hand-washing.svg'));
+  }
+
+  &.-hand::before {
+    @include mask-image(image_path('icones/hand.svg'));
+  }
+
+  &.-happy::before {
+    @include mask-image(image_path('icones/happy.svg'));
+  }
+
+  &.-hear::before {
+    width: 30px;
+    @include mask-image(image_path('icones/hear.svg'));
+  }
+
+  &.-heart::before {
+    width: 24px;
+    @include mask-image(image_path('icones/heart.svg'));
+  }
+
+  &.-lamp::before {
+    @include mask-image(image_path('icones/lamp.svg'));
+  }
+
+  &.-map::before {
+    @include mask-image(image_path('icones/map.svg'));
+  }
+
+  &.-mountain::before {
+    @include mask-image(image_path('icones/mountain.svg'));
+  }
+
+  &.-mouse::before {
+    @include mask-image(image_path('icones/mouse.svg'));
+  }
+
+  &.-mustache::before {
+    width: 30px;
+    @include mask-image(image_path('icones/mustache.svg'));
+  }
+
+  &.-newspaper::before {
+    @include mask-image(image_path('icones/newspaper.svg'));
+  }
+
+  &.-paperclip::before {
+    @include mask-image(image_path('icones/paperclip.svg'));
+  }
+
+  &.-pencil::before {
+    @include mask-image(image_path('icones/pencil.svg'));
+  }
+
+  &.-plant::before {
+    @include mask-image(image_path('icones/plant.svg'));
+  }
+
+  &.-puzzle::before {
+    width: 24px;
+    height: 24px;
+    @include mask-image(image_path('icones/puzzle.svg'));
+  }
+
+  &.-sheep::before {
+    width: 24px;
+    @include mask-image(image_path('icones/sheep.svg'));
+  }
+
+  &.-slide::before {
+    @include mask-image(image_path('icones/slide.svg'));
+  }
+
+  &.-sun::before {
+    @include mask-image(image_path('icones/sun.svg'));
+  }
+
+  &.-thermometer::before {
+    @include mask-image(image_path('icones/thermometer.svg'));
+  }
+
+  &.-write::before {
+    @include mask-image(image_path('icones/write.svg'));
+  }
+}

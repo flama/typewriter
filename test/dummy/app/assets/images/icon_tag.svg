@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_tag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-6-[layout]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Caso-09a-@2x-Copy-8" transform="translate(-455.000000, -33.000000)" stroke="#000000">
+            <g id="icon_tag" transform="translate(456.000000, 34.000000)">
+                <path d="M14.4278261,8.72347826 L3.54086957,12.2608696 C3.33194459,12.3297689 3.10414711,12.3123008 2.90816985,12.2123524 C2.71219259,12.112404 2.56429571,11.938268 2.4973913,11.7286957 L0.191304348,4.6226087 C0.12240498,4.41368372 0.139873127,4.18588624 0.23982153,3.98990898 C0.339769933,3.79393172 0.513905909,3.64603484 0.723478261,3.57913043 L11.6104348,0.0417391304 L15.0295652,2.43478261 C15.7883102,2.96238865 16.1026061,3.93087525 15.7982609,4.80347826 L14.4278261,8.72347826 Z" id="Shape"></path>
+                <circle id="Oval" transform="translate(11.523766, 4.869031) rotate(-18.000000) translate(-11.523766, -4.869031) " cx="11.5237659" cy="4.86903109" r="1.25913043"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

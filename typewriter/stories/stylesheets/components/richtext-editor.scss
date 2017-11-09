@@ -1,0 +1,23 @@
+.richtext-editor {
+  $content-types: p, ul, ol, h1, h2, h3, h4, h5, h6, figure;
+
+  .video-input {
+    width: 54.16vw;
+    height: 30.465vw; // 16:9
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @each $content-type in $content-types {
+    & #{$content-type}.-with-menu-open {
+      margin-top: 60px;
+    }
+    & #{$content-type}.-with-menu-open.-with-video,
+    & #{$content-type}.-with-menu-open.-with-embed {
+      margin-top: 120px;
+    }
+    & #{$content-type}.-with-menu-open.-with-image {
+      margin-top: 200px;
+    }
+  }
+}

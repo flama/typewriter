@@ -1,0 +1,168 @@
+.article-section {
+  $size-text: 20;
+  $size-text-mobile: 18;
+
+  position: relative;
+
+  p,
+  blockquote,
+  .article-list,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  figure,
+  .article-media,
+  .article-media > .info,
+  .author,
+  .moments,
+  .more-section > .content,
+  .video,
+  .embed,
+  .feedback {
+    width: 82vw;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include medium-only {
+      width: 70vw;
+    }
+    @include large-up {
+      @include responsive-prop(width, 0, 780);
+    }
+  }
+
+  li {
+    width: 71.4vw;
+
+    @include medium-only {
+      width: 66vw;
+    }
+    @include large-up {
+      @include responsive-prop(width, 0, 740);
+    }
+    @include responsive-prop(left, 40, 40);
+  }
+
+  .cover {
+    display: flex;
+    justify-content: center;
+
+    width: 82vw;
+    margin: 52px auto;
+  }
+
+  .cover > img {
+    width: 82vw;
+  }
+
+  h1.-image {
+    width: 67vw;
+
+    text-align: center;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 40px;
+  }
+
+  p {
+    line-height: 1.8;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(font-size, $size-text-mobile, $size-text);
+    @include responsive-prop(margin-top, 24, 24);
+  }
+
+  .video-input, .video > iframe, .embed-input, .embed > iframe, .article-image {
+    @include responsive-prop(margin-top, 24, 24);
+  }
+
+  ul,
+  ol {
+    margin-top: 36px;
+  }
+
+  ul {
+    @extend %bulleted-list;
+  }
+
+  ol {
+    @extend %numbered-list;
+  }
+
+  &.-box {
+    width: 82vw;
+    margin: 0 auto;
+
+    background-color: #FFF;
+
+    @include responsive-prop(margin-top, -100, -100);
+    @include responsive-prop(padding-top, 110, 110);
+  }
+
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    @extend %link;
+
+    // text-decoration: none;
+
+    // color: $color-bullfrog;
+  }
+
+  .feedback {
+    font-weight: $font-weight-semi-bold;
+
+    margin: 0 auto;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(margin-top, 48, 87);
+    @include responsive-prop(margin-bottom, 100, 100);
+  }
+
+  .feedback .thumbs {
+    display: inline-block;
+  }
+
+  .feedback .thumbs > * {
+    display: inline-block;
+
+    cursor: pointer;
+
+    background-color: #000;
+
+    @include responsive-prop(width, 18, 18);
+    @include responsive-prop(height, 18, 18);
+    @include responsive-prop(margin-left, 16, 16);
+  }
+
+  .feedback .thumbs .up {
+    @include responsive-prop(margin-top, 7, 7);
+    @include mask-image(image_path('thumbs-up.svg'));
+  }
+
+  .feedback .thumbs .up.-active {
+    background-color: $color-forest;
+  }
+
+  .feedback .thumbs .down {
+    @include responsive-prop(margin-bottom, -5, -5);
+    @include mask-image(image_path('thumbs-down.svg'));
+  }
+
+  .feedback .thumbs .down.-active {
+    background-color: $color-fire-heavy;
+  }
+}

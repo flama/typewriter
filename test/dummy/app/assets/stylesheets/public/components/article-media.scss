@@ -1,0 +1,41 @@
+.article-media {
+  $font-size: 13px;
+
+  margin-top: 40px;
+
+  & > .image {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+
+    @include aspect-ratio(16, 9);
+  }
+
+  & > .info {
+    font-family: $font-family-open-sans;
+    font-size: $font-size;
+    font-style: italic;
+    line-height: 20px;
+
+    margin-top: 10px;
+
+    opacity: .8;
+  }
+
+  & > .info > .author {
+    font-weight: $font-weight-bold;
+
+    color: $color-bullfrog;
+  }
+
+  & > .info > .subtitle {
+    width: 55%;
+    margin-top: 8px;
+
+    color: $color-strong;
+
+    @include small-only {
+      width: 100%;
+    }
+  }
+}

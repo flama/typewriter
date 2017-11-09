@@ -1,0 +1,23 @@
+<nav class="nav-bar">
+  <div class="content">
+    <%= link_to 'paxe.', '#', class: 'brand' %>
+    <!-- <%= link_to 'Ferramentas', '#', class: 'item tools' %>
+    <%= link_to 'Categorias', '#', class: 'item categories'  %> -->
+    <%= link_to 'Artigos', articles_path, class: 'item articles'  %>
+  </div>
+
+  <div class="actions">
+    <div class="profile -organization">
+      <div class="dropdown-menu -hoverable -nostyle">
+        <div class='name'>Paxe.</div>
+        <div class="menu">
+          <div class="column">
+            <%= link_to 'Editar Email', '#', class: 'item' %>
+            <%= link_to 'Editar Senha', '#', class: 'item' %>
+            <%= link_to 'Sair', '#', method: :delete, class: 'item' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

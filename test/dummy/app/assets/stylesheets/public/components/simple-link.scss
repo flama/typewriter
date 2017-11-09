@@ -1,0 +1,21 @@
+.simple-link {
+  $size: 14;
+  $size-mobile: $font-size-small;
+
+  font-family: $font-family-gilroy;
+  @include responsive-prop(font-size, $size, $size);
+  font-weight: $font-weight-regular;
+
+  display: flex;
+
+  text-decoration: underline;
+  letter-spacing: 1px;
+
+  color: $color-strong;
+
+  @include small-only {
+    font-size: $size-mobile;
+
+    letter-spacing: .78px;
+  }
+}

@@ -1,0 +1,28 @@
+.image-placeholder {
+  height: 90px;
+
+  border: 1px dashed $color-lavender-medium;
+  border-radius: 3px;
+
+  & > .image.droparea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100% - 16px);
+    margin: 8px;
+
+    text-transform: none;
+
+    color: $color-light;
+    background-color: $color-invisible;
+  }
+
+  & > .image.droparea > .linklike {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 1ch;
+
+    color: $color-system;
+  }
+}

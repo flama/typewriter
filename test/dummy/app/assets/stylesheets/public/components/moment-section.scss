@@ -1,0 +1,49 @@
+.moment-section {
+  $size-text: 20;
+  $size-text-mobile: 18;
+
+  position: relative;
+
+  &.-box {
+    width: 82vw;
+    margin: 0 auto;
+
+    background-color: #FFF;
+
+    @include responsive-prop(margin-top, -100, -100);
+    @include responsive-prop(padding-top, 110, 110);
+  }
+
+  & > p,
+  & > blockquote,
+  & > .article-list,
+  & > h1,
+  & > h2,
+  & > h3,
+  & > .article-media,
+  & > .article-media > .info,
+  & > .author,
+  & > .moments,
+  & > .more-section > .content {
+    width: 82vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include medium-only {
+      width: 70vw;
+    }
+    @include large-up {
+      @include responsive-prop(width, 0, 780);
+    }
+  }
+
+  & > p,
+  & > .moments > .moment > .content > p {
+    line-height: 1.8;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(font-size, $size-text-mobile, $size-text);
+    @include responsive-prop(margin-top, 24, 24);
+  }
+}

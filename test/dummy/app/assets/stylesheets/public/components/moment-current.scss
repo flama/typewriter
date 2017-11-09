@@ -1,0 +1,112 @@
+.moment-current {
+  $size-text: 12;
+  $size-moment: 13;
+
+  display: flex;
+  align-items: center;
+
+  transition: .23s all cubic-bezier(0, -.01, .16, 1.01);
+
+  border: 2px solid transparent;
+  border-radius: 100px;
+
+  @include responsive-prop(padding-right, 12, 12);
+  @include responsive-prop(min-height, 60, 60);
+
+  & > .avatar {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include responsive-prop(width, 60, 60);
+    @include responsive-prop(height, 60, 60);
+  }
+
+  & > .info > p {
+    font-weight: $font-weight-regular;
+
+    text-transform: none;
+
+    opacity: .8;
+    color: #FFF;
+
+    @include responsive-prop(font-size, $size-text, $size-text);
+  }
+
+  & > .info > .moment {
+    opacity: 1;
+  }
+
+  & > .info > .moment::after {
+    font-weight: $font-weight-bold;
+
+    text-transform: uppercase;
+
+    @include responsive-prop(font-size, $size-moment, $size-moment);
+  }
+
+  &:hover {
+    transition: none;
+
+    border-color: rgba(#FFF, .3);
+  }
+}
+
+%negative-moment-current {
+  & > .info > p {
+    color: $color-bullfrog;
+  }
+
+  &:hover {
+    border-color: rgba($color-darkgray, .1);
+  }
+}
+
+.moment-current.-inquietacao {
+  & > .avatar {
+    background-image: url(image_path('moments/circle-moment-1.svg'));
+  }
+
+  & > .info > .moment::after {
+    content: 'Inquietação';
+  }
+}
+
+.moment-current.-caos {
+  & > .avatar {
+    background-image: url(image_path('moments/circle-moment-2.svg'));
+  }
+
+  & > .info > .moment::after {
+    content: 'Caos';
+  }
+}
+
+.moment-current.-abertura {
+  & > .avatar {
+    background-image: url(image_path('moments/circle-moment-3.svg'));
+  }
+
+  & > .info > .moment::after {
+    content: 'Abertura';
+  }
+}
+
+.moment-current.-preparacao {
+  & > .avatar {
+    background-image: url(image_path('moments/circle-moment-4.svg'));
+  }
+
+  & > .info > .moment::after {
+    content: 'Preparação';
+  }
+}
+
+.moment-current.-mudanca {
+  & > .avatar {
+    background-image: url(image_path('moments/circle-moment-5.svg'));
+  }
+
+  & > .info > .moment::after {
+    content: 'Mudança';
+  }
+}

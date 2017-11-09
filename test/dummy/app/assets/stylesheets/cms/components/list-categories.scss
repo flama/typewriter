@@ -1,0 +1,31 @@
+.list-categories {
+  $size-date: $font-size-micro;
+  $size-content: $font-size-base;
+
+  @extend .list-items;
+
+  & > .item {
+    @extend %list-item;
+
+    grid-template-columns: $global-size-wrapper 1fr $global-size-wrapper;
+  }
+
+  & > .item > .category {
+    display: flex;
+    align-items: center;
+
+    justify-self: start;
+  }
+
+  & > .item > .category > .icon-present {
+    margin-right: 16px;
+  }
+
+  & > .item > .category > p {
+    font-family: $font-family-roboto;
+    font-size: $size-content;
+    line-height: 26px;
+
+    color: $color-night;
+  }
+}

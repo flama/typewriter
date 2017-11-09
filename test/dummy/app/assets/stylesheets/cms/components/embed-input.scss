@@ -1,0 +1,26 @@
+.embed-input {
+  position: relative;
+
+  width: 100%;
+  max-width: 54.16vw;
+  // margin-left: 22.92vw;
+  margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    content: '';
+
+    cursor: default;
+  }
+
+  & .shopify-buy-frame {
+    margin: 0 auto;
+  }
+}

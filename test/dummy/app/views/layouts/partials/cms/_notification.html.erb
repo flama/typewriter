@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+  <div class="success-notification">
+    <%= flash[:notice] %>
+    <% link_to '', '#', class: 'close-icon' %>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="error-notification">
+    <%= flash[:alert] %>
+    <% link_to '', '#', class: 'close-icon' %>
+  </div>
+<% end %>

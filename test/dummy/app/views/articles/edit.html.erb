@@ -1,0 +1,141 @@
+<% content_for :sub_navbar do %>
+  <div class="actions">
+    <%= link_to 'Pré visualizar', @article, class: 'item -preview' %>
+    <%= link_to 'Salvar', "javascript:document.getElementsByTagName('form')[0].submit()", class: 'button -outline' %>
+  </div>
+<% end %>
+
+<% content_for :variant, '-white' %>
+
+<div class="page-moment" style="padding-top: 50px">
+  <article class="article-section -box">
+    <%= form_with(model: @article, local: true) do |form| %>
+      <%= typewriter_for 'ArticleEditor', article: @article %>
+    <% end %>
+
+<!--
+    <div class="typewriter-editor">
+      <div data-slate-editor>
+        <h1 class="-image">Questões para refletir</h1>
+
+        <figure class="cover">
+          <div class="highlight-toolbar -shown">
+            <div class="image-toolbar-button -image -active"></div>
+            <div class="image-toolbar-button -add">Adicionar</div>
+            <div class="image-toolbar-button -edit">Editar</div>
+            <div class="image-toolbar-button -remove">Remover</div>
+          </div>
+          <%= image_tag 'front/article-3.jpg' %>
+        </figure>
+        <p>
+          Preparação para Quando uma pessoa passa pelo processo mais crítico de autoconhecimento e se dispõe aolhar para si e a se aceitar, lidando e reorganizando sua forma de pensar, sentir e agir, deixando de atribuir ao externo as razões da sua infelicidade, ela está pronta para mudar. Aliás, 100% nunca estamos, mas reconhecer que olhando para si mesmo você deixa de atribuir somente ao trabalho as com maturidade, os próximos passos - o mais importante, neste momento, é definir quem você quer ser, e não somente onde quer chegar.
+        </p>
+
+        <figure class="article-media">
+          <%= image_tag 'front/article-10.jpg', class: 'image' %>
+          <figcaption class="info">
+            <div class="author">
+              Shawn Achor
+            </div>
+            <div class="subtitle">
+              Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem
+               lacinia quam venenatis vestibulum.
+            </div>
+          </figcaption>
+        </figure>
+
+        <p>
+          Aliás, 100% nunca estamos, mas reconhecer que olhando para si mesmo você deixa de atribuir somente ao trabalho as razões de tantos males, você reconhece os <a href="#">fatores de escolhas do passado para projetar, com maturidade, os próximos passos</a> - o mais importante, neste momento, é definir quem você quer ser, e não somente onde quer chegar.
+        </p>
+
+        <h3>Questões para refletir</h3>
+        <ol>
+          <li>
+            Quais são as três principais razões de sua confusão quanto a <b>seus próximos passos</b>?
+          </li>
+          <li>
+            Quais são seus três maiores receios quanto a uma <b>mudança de profissão</b>?
+          </li>
+          <li>
+            Quais são os três maiores <b>desafios práticos</b> a serem enfrentados?
+          </li>
+        </ol>
+
+        <h3>Questões para refletir</h3>
+        <ul>
+          <li>
+            Quais são as três principais razões de sua confusão quanto a <b>seus próximos passos</b>?
+          </li>
+          <li>
+            Quais são seus três maiores receios quanto a uma <b>mudança de profissão</b>?
+          </li>
+          <li>
+            Quais são os três maiores <b>desafios práticos</b> a serem enfrentados?
+          </li>
+        </ul>
+
+        <figure class="article-media">
+          <%= image_tag 'front/article-11.jpg', class: 'image' %>
+          <figcaption class="info">
+            <div class="author">
+              Shawn Achor
+            </div>
+            <div class="subtitle">
+              Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+            </div>
+          </figcaption>
+        </figure>
+
+        <h2>Coach</h2>
+        <p>
+          Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        </p>
+
+        <h3>Paula Scher</h3>
+        <figure class="article-media">
+          <%= image_tag 'front/article-12.jpg', class: 'image' %>
+          <figcaption class="info">
+            <div class="author">
+              Shawn Achor
+            </div>
+            <div class="subtitle">
+              Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+            </div>
+          </figcaption>
+        </figure>
+
+        <p>
+          Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit.
+        </p>
+        <p>
+          <%= link_to 'Massa justo', '' %>
+        </p>
+
+        <h3>Jonathan Ive</h3>
+
+        <figure class="article-media">
+          <%= image_tag 'front/article-13.jpg', class: 'image' %>
+          <figcaption class="info">
+            <div class="author">
+              Shawn Achor
+            </div>
+            <div class="subtitle">
+              Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+            </div>
+          </figcaption>
+        </figure>
+
+        <p>
+          Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit.
+        </p>
+        <p>
+          <%= link_to 'Massa justo', '' %>
+        </p>
+      </div>
+    </div>
+ -->
+
+  </article>
+
+  </div>
+</div>

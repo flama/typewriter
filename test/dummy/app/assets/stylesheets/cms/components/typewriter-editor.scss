@@ -1,0 +1,48 @@
+.page-moment {
+  .hero-content {
+    width: 82vw;
+    margin: 0 auto;
+  }
+
+  .cover.-empty {
+    align-items: center;
+
+    height: 1px;
+
+    background-color: $color-system;
+  }
+
+  .cover > .highlight-toolbar {
+    margin-top: 40px;
+  }
+
+  .cover.-empty > .highlight-toolbar {
+    margin-top: 0;
+  }
+}
+
+.article-editor {
+  $content-types: p, ul, ol, h1, h2, h3, h4, h5, h6, figure;
+
+  .video-input {
+    width: 54.16vw;
+    height: 30.465vw; // 16:9
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @each $content-type in $content-types {
+    #{$content-type}.-with-menu-open {
+      @include responsive-prop(margin-top, 100, 100);
+    }
+    #{$content-type}.-with-menu-open.-with-embed {
+      @include responsive-prop(margin-top, 180, 180);
+    }
+    #{$content-type}.-with-menu-open.-with-video {
+      @include responsive-prop(margin-top, 145, 145);
+    }
+    #{$content-type}.-with-menu-open.-with-image {
+      @include responsive-prop(margin-top, 200, 200);
+    }
+  }
+}

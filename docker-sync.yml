@@ -1,0 +1,8 @@
+version: "2"
+syncs:
+  typewriter-engine-sync:
+    src: '.'
+  typewriter-gems-sync:
+    src: './gems'
+  typewriter-yarn_modules-sync:
+    src: './yarn_modules'

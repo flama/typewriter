@@ -1,0 +1,44 @@
+.list-admin {
+  $size-info: $font-size-micro;
+
+  @extend .list-items;
+
+   > .item {
+    @extend %list-item;
+
+    font-family: $font-family-roboto;
+
+    grid-template-columns: $global-size-wrapper 3fr 8fr 2fr $global-size-wrapper;
+  }
+
+   > .item > .organization {
+    display: flex;
+  }
+
+  > .item > .organization > .avatar {
+    margin-right: 16px;
+  }
+
+   > .item > .organization > .info {
+    font-size: $size-info;
+    line-height: 15px;
+
+    letter-spacing: .5px;
+
+    color: $color-light;
+  }
+
+   > .item > .organization > .info > .name {
+    font-weight: $font-weight-medium;
+
+    margin-bottom: 10px;
+
+    color: $color-bullfrog;
+  }
+
+   > .item > .content {
+    line-height: 26px;
+
+    color: $color-bullfrog;
+  }
+}

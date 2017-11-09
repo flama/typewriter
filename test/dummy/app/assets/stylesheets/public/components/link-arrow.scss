@@ -1,0 +1,28 @@
+.link-arrow {
+  $font-size: $font-size-base;
+
+  font-family: $font-family-open-sans;
+  font-size: $font-size;
+  font-weight: $font-weight-semi-bold;
+
+  display: inline-flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: $color-bullfrog;
+
+  &::after {
+    display: inline-block;
+
+    width: 16px;
+    height: 9px;
+    margin-left: 24px;
+
+    content: '';
+
+    background-color: $color-bullfrog;
+
+    @include mask-image(image_path('arrow-right.svg'));
+  }
+}

@@ -1,0 +1,201 @@
+.quiz-options {
+  $size: 18px;
+  $size-mobile: $font-size-small;
+  $size-text: 24px;
+  $size-text-mobile: 22px;
+  $size-description: $font-size-small;
+  // Colors
+  $color-major-positive: #055A5B;
+  $color-positive: #177F67;
+  $color-minor-positive: #32B67A;
+  $color-neutral: #DCDCDC;
+  $color-minor-negative: #F3A5B7;
+  $color-negative: #CB5873;
+  $color-major-negative: #A11E33;
+
+  & > legend {
+    font-family: $font-family-gilroy;
+    font-size: $size-text-mobile;
+    font-weight: $font-weight-bold;
+    line-height: 34px;
+
+    width: 100%;
+
+    text-align: center;
+
+    @include medium-up {
+      font-size: $size-text;
+    }
+  }
+
+  & > .description {
+    font-size: $size-description;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    color: $color-strong;
+  }
+
+  & > .options {
+    font-family: $font-family-gilroy;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  & > .options::before,
+  & > .options::after {
+    font-size: $size;
+    font-weight: $font-weight-bold;
+
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: rgba($color-strong, .5);
+
+    @include medium-down {
+      font-size: $size-mobile;
+
+      position: absolute;
+      top: 48px;
+
+      flex-basis: 100%;
+    }
+  }
+
+  & > .options::before {
+    left: -15ch;
+
+    content: 'Não me identifico';
+
+    @include medium-down {
+      left: 0;
+
+      text-align: left;
+    }
+  }
+
+  & > .options::after {
+    right: -9ch;
+
+    content: 'Muito Eu!';
+
+    @include medium-down {
+      right: 0;
+
+      text-align: right;
+    }
+  }
+
+  & > .options > .option {
+    cursor: pointer;
+  }
+
+  & > .options > .option > .label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: $color-neutral;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  & > .options > .option > .input {
+    display: none;
+  }
+
+  & > .options > .option > .input:checked + .label::after,
+  & > .options > .option:hover > .input + .label::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    content: '';
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background-color: $color-neutral;
+  }
+
+  & > .options > .option.-major-positive > .input:checked + .label::after,
+  & > .options > .option.-major-positive:hover > .input + .label::after {
+    background-color: $color-major-positive;
+  }
+
+  & > .options > .option.-major-positive > .label {
+    border-color: $color-major-positive;
+  }
+
+  & > .options > .option.-positive > .input:checked + .label::after,
+  & > .options > .option.-positive:hover > .input + .label::after {
+    background-color: $color-positive;
+  }
+
+  & > .options > .option.-positive > .label {
+    border-color: $color-positive;
+  }
+
+  & > .options > .option.-minor-positive > .input:checked + .label::after,
+  & > .options > .option.-minor-positive:hover > .input + .label::after {
+    background-color: $color-minor-positive;
+  }
+
+  & > .options > .option.-minor-positive > .label {
+    border-color: $color-minor-positive;
+  }
+
+  & > .options > .option.-minor-negative > .input:checked + .label::after,
+  & > .options > .option.-minor-negative:hover > .input + .label::after {
+    background-color: $color-minor-negative;
+  }
+
+  & > .options > .option.-minor-negative > .label {
+    border-color: $color-minor-negative;
+  }
+
+  & > .options > .option.-negative > .input:checked + .label::after,
+  & > .options > .option.-negative:hover > .input + .label::after {
+    background-color: $color-negative;
+  }
+
+  & > .options > .option.-negative > .label {
+    border-color: $color-negative;
+  }
+
+  & > .options > .option.-major-negative > .input:checked + .label::after,
+  & > .options > .option.-major-negative:hover > .input + .label::after {
+    background-color: $color-major-negative;
+  }
+
+  & > .options > .option.-major-negative > .label {
+    border-color: $color-major-negative;
+  }
+}

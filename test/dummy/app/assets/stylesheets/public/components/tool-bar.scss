@@ -1,0 +1,99 @@
+.tool-bar {
+  $size-text: 22;
+  $size-title: 32;
+  $size-text-mobile: 18;
+  $size-title-mobile: 24;
+
+  @extend .wrapper-container;
+
+  font-family: $font-family-gilroy;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 0 5vw;
+
+  background-color: #FFF;
+
+  @include responsive-prop(padding-top, 18, 60);
+  @include responsive-prop(padding-bottom, 32, 60);
+
+  & > .title {
+    font-weight: $font-weight-bold;
+
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+  }
+
+  & > .tools {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 90%;
+
+    @include responsive-prop(margin-top, 24, 32);
+    @include small-only {
+      width: 100%;
+    }
+  }
+
+  & > .tools > .tool {
+    font-weight: $font-weight-bold;
+
+    display: inline-flex;
+
+    text-decoration: none;
+
+    color: $color-strong;
+
+    @include responsive-prop(font-size, $size-text-mobile, $size-text);
+    @include responsive-prop(margin-right, 0, 60);
+    @include responsive-prop(padding-top, 15, 10);
+    @include responsive-prop(padding-bottom, 15, 10);
+    @include medium-only {
+      flex-basis: 50%;
+
+      margin-right: 0;
+    }
+  }
+
+  & > .tools > .tool:hover,
+  & > .tools > .tool.-active {
+    color: currentColor;
+
+    &::before {
+      background-color: currentColor;
+    }
+  }
+
+  & > .tools > .tool::before {
+    display: inline-block;
+
+    content: '';
+
+    background-color: $color-strong;
+
+    @include responsive-prop(margin-right, 6, 24);
+  }
+
+  & > .divisor {
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+
+    background-color: $color-divisor;
+
+    @include responsive-prop(margin-top, 30, 30);
+    @include medium-only {
+      width: 70vw;
+    }
+    @include small-only {
+      width: 100%;
+    }
+  }
+}

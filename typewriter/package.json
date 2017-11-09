@@ -1,0 +1,61 @@
+{
+  "name": "@flama.is/typewriter",
+  "version": "0.1.8",
+  "description": "Content editor for CMS creators",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "minified:main": "dist/index.min.js",
+  "jsnext:main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm-run-all transpile minify size",
+    "transpile": "rollup -c",
+    "minify": "uglifyjs $npm_package_main -cm -o $npm_package_minified_main --source-map content=${npm_package_main}.map",
+    "size": "yarn gzip-size $npm_package_minified_main",
+    "prepare": "yarn run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
+    "@storybook/cli": "^3.2.9",
+    "@storybook/react": "^3.2.8",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-async-to-module-method": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "gzip-size-cli": "^2.1.0",
+    "is-url": "^1.2.2",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "sass-loader": "^6.0.6",
+    "uglify-js": "^3.1.1",
+    "yarn-run-all": "^3.1.1"
+  },
+  "peerDependencies": {
+    "react": "^15.6.1"
+  },
+  "dependencies": {
+    "autosize": "^4.0.0",
+    "get-video-id": "^2.1.6",
+    "immutable": "^3.8.1",
+    "keycode": "^2.1.9",
+    "rc-tooltip": "^3.5.0",
+    "react-portal": "^3.1.0",
+    "react-render-html": "^0.5.2",
+    "slate": "^0.27.1",
+    "slate-react": "^0.5.1"
+  }
+}

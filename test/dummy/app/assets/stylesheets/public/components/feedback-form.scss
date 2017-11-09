@@ -1,0 +1,59 @@
+.feedback-form {
+  $size: 11;
+
+  font-weight: $font-weight-regular;
+
+  display: block;
+  align-items: center;
+
+  color: $color-bullfrog;
+  background-color: $color-wall;
+
+  @include responsive-prop(margin-top, 11, 11);
+  @include responsive-prop(padding-top, 25, 25);
+  @include responsive-prop(padding-right, 30, 30);
+  @include responsive-prop(padding-left, 30, 30);
+  @include responsive-prop(padding-bottom, 25, 25);
+  @include medium-down {
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+
+    @include responsive-prop(margin-top, 32, 32);
+  }
+
+  .input > * {
+    @include responsive-prop(margin-top, 8, 8);
+  }
+
+  .input > .label {
+    font-family: $font-family-roboto;
+    font-weight: $font-weight-medium;
+
+    @include responsive-prop(margin-top, 24, 24);
+  }
+
+  .outline-button {
+    @include responsive-prop(margin-top, 40, 40);
+    @include responsive-prop(width, 173, 173);
+    @include small-only {
+      width: 100%;
+    }
+  }
+
+  .outline-button.-error {
+    @include responsive-prop(margin-top, (30 - $size), (30 - $size));
+  }
+
+  .field-error {
+    margin-top: .5em;
+
+    text-transform: uppercase;
+
+    color: $color-fire-heavy;
+
+    @include responsive-prop(font-size, $size, $size);
+  }
+}

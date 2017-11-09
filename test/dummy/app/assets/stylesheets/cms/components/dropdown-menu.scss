@@ -1,0 +1,213 @@
+.dropdown-menu {
+  $size-base: $font-size-micro;
+  $size-dropdown: $font-size-micro;
+  $color-lavender-opacity-hack: rgb(246, 247, 255);
+
+  &:not(.-nostyle) {
+    font-size: $size-base;
+    font-weight: $font-weight-medium;
+
+    position: relative;
+
+    width: 180px;
+    height: 32px;
+
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-strong;
+  }
+
+  &:not(-nostyle) > .name {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 10px;
+  }
+
+  &:not(.-nostyle) > .name::after {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    display: inline-block;
+
+    width: 9px;
+    height: 15px;
+
+    content: '';
+    transform: translateY(-50%);
+
+    background-color: currentColor;
+
+    @include mask-image(image_path('icon_arrow_down.svg'));
+  }
+
+  &:not(.-nostyle).-active {
+    color: #000;
+  }
+
+  &:not(.-nostyle).-active > .name::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &:not(.-nostyle):hover {
+    color: $color-system;
+  }
+
+  &:not(.-nostyle).-active:hover {
+    color: #000;
+  }
+
+  &.-nostyle {
+    position: relative;
+  }
+
+  & > .menu {
+    position: absolute;
+    z-index: z-index(overlay);
+    top: 40px;
+    left: -22px;
+
+    display: none;
+
+    min-width: 180px;
+    padding: 20px 0;
+    padding-top: 40px;
+
+    border: 1px solid $color-lavender-light;
+    background-color: #FFF;
+    box-shadow: rgba(#000, .16) 0 2px 10px 0;
+  }
+
+  & > .menu::after,
+  & > .menu::before {
+    position: absolute;
+    bottom: 100%;
+    left: 31px;
+
+    width: 0;
+    height: 0;
+
+    content: ' ';
+    pointer-events: none;
+
+    border: solid transparent;
+  }
+
+  & > .menu::after {
+    margin-left: -8px;
+
+    border-width: 8px;
+    border-bottom-color: #FFF;
+  }
+
+  & > .menu.-filter::after {
+    border-bottom-color: $color-lavender-opacity-hack;
+  }
+
+  & > .menu::before {
+    margin-left: -10px;
+
+    border-width: 10px;
+    border-bottom-color: $color-lavender-light;
+  }
+
+  & > .menu > .column > .item {
+    font-size: $size-dropdown;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 12.5px 32px;
+  }
+
+  & > .menu > .column > .clear {
+    font-weight: $font-weight-medium;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    color: $color-light;
+    background-color: $color-lavender-opacity-hack;
+  }
+
+  & > .menu > .column > .clear::after {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 24px;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    content: '';
+
+    background-color: $color-light;
+
+    @include mask-image(image_path('close.svg'));
+  }
+
+  & > .menu > .column > .clear:hover::after {
+    background-color: $color-system;
+  }
+
+  & > .menu > .column > .item:hover {
+    color: $color-system;
+  }
+
+  & > .menu > .column {
+    min-width: 180px;
+  }
+
+  & > .menu > .column:not(:first-child) {
+    border-left: rgba($color-light, .1) solid 1px;
+  }
+
+  & > .menu > .box {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 4px 24px;
+  }
+
+  & > .menu > .box > .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 4px;
+  }
+
+  & > .menu > .box > .item:hover {
+    background-color: rgba($color-system, .1);
+  }
+
+  &.-active > .menu,
+  &.-hoverable:hover > .menu {
+    display: flex;
+  }
+
+  &.-box {
+    border: $color-fade 1px solid;
+  }
+
+  &.-box > .name {
+    padding: 10px;
+  }
+
+  & > .name.-placeholder {
+    color: $color-light;
+  }
+}

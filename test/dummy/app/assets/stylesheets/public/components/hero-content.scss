@@ -1,0 +1,74 @@
+.hero-content {
+  $size-title: 140;
+  $size-title-tablet: 120;
+  $size-title-mobile: 52;
+  $size-subtitle: 36;
+  $size-subtitle-mobile: 26;
+  $size-description: 20;
+  $size-description-mobile: 18;
+
+  @extend .wrapper-container;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include responsive-prop(min-height, 116, 310);
+
+  & > .title {
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    color: #FFF;
+
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+    @include medium-only {
+      @include responsive-prop(font-size, $size-title-tablet, $size-title-tablet);
+    }
+    @include large-up {
+      letter-spacing: -2px;
+    }
+  }
+
+  & > .simple-divisor {
+    background-color: #FFF;
+  }
+
+  & > .subtitle {
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+
+    @include responsive-prop(font-size, $size-subtitle-mobile, $size-subtitle);
+    @include responsive-prop(margin-top, 13, 13);
+  }
+
+  & > .description {
+    font-family: $font-family-open-sans;
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+
+    @include responsive-prop(font-size, $size-description-mobile, $size-description);
+    @include responsive-prop(margin-top, 16, 16);
+    @include large-up {
+      width: 52vw;
+    }
+  }
+
+  & > .character {
+    position: absolute;
+    z-index: z-index(overlay);
+    right: 0;
+
+    display: none;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include medium-up {
+      display: block;
+    }
+  }
+}

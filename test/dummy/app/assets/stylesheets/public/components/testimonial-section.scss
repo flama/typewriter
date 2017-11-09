@@ -1,0 +1,149 @@
+.testimonial-section {
+  $size-quotation: 24;
+  $size-title: 48;
+  $size-title-mobile: 38;
+  $size-text: 20;
+  $size-name: 18;
+  $size-role: 14;
+
+  font-family: $font-family-gilroy;
+  font-weight: $font-weight-bold;
+
+  & > .title {
+    text-align: center;
+
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+    @include responsive-prop(line-height, 40, 54);
+    @include small-only {
+      text-align: left;
+    }
+  }
+
+  & > .items {
+    display: flex;
+    justify-content: space-between;
+
+    @include responsive-prop(margin-top, 8, 8);
+    @include small-only {
+      flex-direction: column;
+    }
+  }
+
+  & > .items > .item {
+    position: relative;
+
+    width: 32%;
+
+    color: $color-bullfrog;
+
+    @include small-only {
+      width: 100%;
+
+      text-align: left;
+
+      @include responsive-prop(margin-top, 32);
+    }
+  }
+
+  & > .items > .item:first-child {
+    @include responsive-prop(margin-top, 24);
+  }
+
+  & > .items > .item > blockquote {
+    @include responsive-prop(margin-left, 20, 20);
+    @include small-only {
+      margin-left: 0;
+    }
+  }
+
+  & > .items > .item > blockquote::before,
+  & > .items > .item > blockquote::after {
+    color: $color-brand;
+
+    @include responsive-prop(font-size, $size-quotation, $size-quotation);
+  }
+
+  & > .items > .item > blockquote::before {
+    position: absolute;
+    left: 0;
+
+    content: '“';
+
+    @include small-only {
+      @include responsive-prop(left, -20, -20);
+    }
+  }
+
+  & > .items > .item > blockquote::after {
+    content: '”';
+
+    @include responsive-prop(margin-left, 4, 4);
+  }
+
+  & > .items > .item {
+    font-weight: $font-weight-bold;
+    font-style: normal;
+    line-height: 1.5;
+
+    @include responsive-prop(font-size, $size-text, $size-text);
+    @include responsive-prop(margin-top, 45, 45);
+  }
+
+  & > .items > .item > .author > .info > .name {
+    font-weight: $font-weight-regular;
+    line-height: 1.2;
+
+    display: block;
+
+    @include responsive-prop(font-size, $size-name, $size-name);
+  }
+
+  & > .items > .item > .author > .info > .role {
+    font-weight: $font-weight-regular;
+    line-height: 1.3;
+
+    display: block;
+
+    color: $color-strong;
+
+    @include responsive-prop(font-size, $size-role, $size-role);
+    @include responsive-prop(margin-top, 8, 8);
+  }
+
+  & > .items > .item > .author {
+    display: flex;
+    align-items: flex-start;
+
+    @include medium-up {
+      align-items: center;
+    }
+    @include responsive-prop(margin-top, 24, 25);
+    @include responsive-prop(margin-left, 0, 20);
+  }
+
+  & > .items > .item > .author > .info {
+    flex: 1;
+
+    @include responsive-prop(margin-left, 12, 12);
+  }
+
+  & > .items > .item > .author > .avatar {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include responsive-prop(width, 50, 50);
+    @include responsive-prop(height, 50, 50);
+  }
+
+  & > .items > .item > .author > .avatar.-camila {
+    background-image: url(image_path('home/camila-silvestre.png'));
+  }
+
+  & > .items > .item > .author > .avatar.-clarice {
+    background-image: url(image_path('home/clarice-greco.png'));
+  }
+
+  & > .items > .item > .author > .avatar.-alejandro {
+    background-image: url(image_path('home/alejandro-fanjul.png'));
+  }
+}

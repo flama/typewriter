@@ -1,0 +1,15 @@
+version: '2'
+services:
+  engine:
+    volumes:
+      - typewriter-engine-sync:/engine:nocopy
+      - typewriter-gems-sync:/gems:nocopy
+      - typewriter-yarn_modules-sync:/yarn_modules:nocopy
+
+volumes:
+  typewriter-engine-sync:
+    external: true
+  typewriter-gems-sync:
+    external: true
+  typewriter-yarn_modules-sync:
+    external: true

@@ -1,0 +1,23 @@
+.page-index {
+  @extend .wrapper-container;
+
+  font-family: $font-family-gilroy;
+  font-size: $font-size-big;
+  font-weight: $font-weight-light;
+
+  margin-top: 50px;
+  padding-bottom: 100px;
+
+   > a {
+    color: $color-light;
+  }
+
+   > a:hover {
+    color: $color-fire-heavy;
+  }
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}

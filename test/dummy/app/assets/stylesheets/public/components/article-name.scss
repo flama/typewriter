@@ -1,0 +1,26 @@
+$article-name-font-size-title: 26px;
+$article-name-font-size-title-mobile: 24px;
+
+.article-name {
+  font-family: $font-family-gilroy;
+  font-size: $article-name-font-size-title;
+  font-weight: $font-weight-regular;
+  line-height: 37px;
+
+  color: $color-strong;
+
+  @include medium-only {
+    font-size: $article-name-font-size-title;
+    line-height: 40px;
+  }
+  @include small-only {
+    font-size: $article-name-font-size-title-mobile;
+    line-height: 37px;
+  }
+
+  & > .bold {
+    font-weight: $font-weight-bold;
+
+    color: $color-bullfrog;
+  }
+}

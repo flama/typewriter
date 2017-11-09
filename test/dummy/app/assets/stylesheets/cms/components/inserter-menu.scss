@@ -1,0 +1,153 @@
+.inserter-menu {
+  position: absolute;
+  width: 82vw;
+  left: 50%;
+  margin-left: calc((41vw + 42px) * -1);
+
+  @include medium-only {
+    width: 70vw;
+    margin-left: calc((35vw + 47px) * -1);
+  }
+
+  @include large-up {
+    width: 54vw;
+    margin-left: calc((27vw + 47px) * -1);
+  }
+
+  display: flex;
+  pointer-events: none;
+
+  & > .toggle {
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+    transform: scale(0);
+    pointer-events: auto;
+
+    border: none;
+    background-image: url(image_path('outline-plus.svg'));
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  & > .content {
+    display: flex;
+    flex-direction: column;
+
+    width: 60vw; // same as editor
+  }
+
+  & > .content > .menu {
+    display: flex;
+    align-items: center;
+
+    max-width: 0;
+    height: 32px;
+  }
+
+  & > .content > .menu > * {
+    width: 26px;
+    height: 22px;
+    margin: 0;
+    margin-left: 20px;
+
+    cursor: pointer;
+
+    background-color: #000;
+
+    &:hover {
+      background-color: $color-system;
+    }
+  }
+
+  & > .content > .menu .image {
+    @include mask-image(image_path('image.svg'));
+  }
+
+  & > .content > .menu .video {
+    @include mask-image(image_path('video.svg'));
+  }
+
+  & > .content > .menu .embed {
+    // TODO: change this to embed icon when available!
+    @include mask-image(image_path('code.svg'));
+  }
+
+  & > .content > .menu .bulleted-list {
+    width: 24px;
+    height: 16px;
+
+    @include mask-image(image_path('unordered-list.svg'));
+  }
+
+  & > .content > .menu .numbered-list {
+    height: 20px;
+
+    @include mask-image(image_path('ordered-list.svg'));
+  }
+
+  & > .content > .menu .upload {
+    border: none;
+    border-bottom: 1px solid $color-system;
+    background-color: transparent;
+  }
+
+  & > .content > .placeholder {
+    margin-left: 20px;
+  }
+
+  & > .content > .placeholder.-with-image {
+    @extend .image-placeholder;
+
+    margin-top: 8px;
+  }
+
+  & > .content > .placeholder > .droparea {
+    display: none;
+  }
+
+  & > .content > .placeholder.-with-video > .video.droparea,
+  & > .content > .placeholder.-with-embed > .embed.droparea {
+    display: flex;
+
+    height: 100%;
+    margin: 0;
+    margin-top: 8px;
+  }
+
+  & > .content > .placeholder.-with-video > .video.droparea {
+    border-bottom: 1px solid $color-system;
+  }
+
+  & > .content > .placeholder.-with-video > .droparea > .input {
+    padding: 0;
+  }
+
+  & > .content > .placeholder.-with-embed > .embed.droparea > .input {
+    box-sizing: border-box;
+    min-height: 3em;
+    padding: 1em;
+
+    resize: none;
+
+    border: 1px solid $color-system;
+  }
+
+  &.-visible > .toggle {
+    transform: scale(1);
+  }
+
+  &.-open {
+    pointer-events: auto;
+  }
+
+  &.-open > .toggle {
+    transform: scale(1) rotate(315deg);
+  }
+
+  &.-open > .content > .menu {
+    max-width: 100%;
+  }
+}

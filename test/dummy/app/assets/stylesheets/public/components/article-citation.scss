@@ -1,0 +1,93 @@
+.article-citation {
+  $size-text: 26;
+  $size-text-mobile: 22;
+  $size-cite: 18;
+  $size-cite-mobile: 16;
+
+  font-family: $font-family-gilroy;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 80vw;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  color: $color-bullfrog;
+
+  @include large-up {
+    width: 40vw;
+    height: 35vw;
+  }
+  @include medium-only {
+    width: 60vw;
+  }
+
+  & > span {
+    font-weight: $font-weight-bold;
+    line-height: 1.4;
+
+    @include responsive-prop(font-size, $size-text-mobile, $size-text);
+  }
+
+  & > span::before,
+  & > span::after {
+    display: block;
+
+    width: 50px;
+    height: 1px;
+
+    content: '';
+
+    background-color: $color-bullfrog;
+  }
+
+  & > span::before {
+    margin-bottom: 1em;
+  }
+
+  & > span::after {
+    margin-top: 1em;
+  }
+
+  & > footer > .author {
+    font-family: $font-family-gilroy;
+    font-weight: $font-weight-semi-bold;
+    font-style: normal;
+
+    display: block;
+
+    margin-top: 1em;
+
+    @include responsive-prop(font-size, $size-cite-mobile, $size-cite);
+  }
+
+  & > span,
+  &::after,
+  &::before,
+  & > footer > .author {
+    margin-left: 0;
+
+    @include medium-up {
+      margin-left: 33%;
+    }
+  }
+
+  & > .image {
+    position: absolute;
+    z-index: z-index(under);
+    top: calc(50% - 17.5vw);
+    left: -5vw;
+
+    display: none;
+
+    width: 35vw;
+
+    @include medium-up {
+      display: block;
+    }
+  }
+}

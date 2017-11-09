@@ -1,0 +1,56 @@
+.list-tools {
+  $size-date: $font-size-micro;
+  $size-content: $font-size-base;
+
+  @extend .list-items;
+
+  * {
+    font-family: $font-family-roboto;
+  }
+
+  & > .item {
+    @extend %list-item;
+
+    grid-template-columns: $global-size-wrapper 2fr 3fr 5fr 2fr $global-size-wrapper;
+  }
+
+  & > .item > .moment {
+    display: flex;
+    align-items: center;
+  }
+
+  & > .item > .moment > .number {
+    margin-right: 18px;
+
+    color: $color-night;
+  }
+
+  & > .item > .tool {
+    display: flex;
+    align-items: center;
+
+    color: $color-night;
+  }
+
+  & > .item > .tool > .icon-present {
+    margin-right: 16px;
+  }
+
+  & > .item > .content {
+    font-size: $size-content;
+    line-height: 26px;
+
+    color: $color-night;
+  }
+
+  & > .item > .content > .date {
+    font-size: $size-date;
+    line-height: 16px;
+
+    margin-bottom: 7px;
+
+    letter-spacing: .5px;
+
+    color: $color-light;
+  }
+}

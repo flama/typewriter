@@ -1,0 +1,83 @@
+.article-card {
+  $gap: 20px;
+  $size-date: 18;
+  $size-date-mobile: 15;
+
+  line-height: 1.6;
+
+  z-index: z-index(overlay);
+
+  display: flex;
+  flex-direction: column;
+
+  @include responsive-prop(margin-top, 50, 70);
+  @include flex-grid(1);
+  @include large-up {
+    margin-left: $gap/2;
+    margin-right: $gap/2;
+
+    @include flex-grid(3);
+  }
+  @include medium-only {
+    margin-left: $gap/2;
+    margin-right: $gap/2;
+
+    @include flex-grid(2);
+  }
+
+  & > .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    @include responsive-prop(margin-top, 20, 20);
+  }
+
+  &.-dateless > .content {
+    justify-content: flex-start;
+  }
+
+  & > .content > .date {
+    font-family: $font-family-gilroy;
+    font-weight: $font-weight-bold;
+
+    text-transform: none;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(margin-top, 24, 32);
+    @include responsive-prop(font-size, $size-date-mobile, $size-date);
+  }
+
+  & > .image {
+    position: relative;
+  }
+
+  & > .image::before {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    transition: opacity .25s ease-in-out;
+
+    opacity: 0;
+    background-color: currentColor;
+  }
+
+  &:hover > .image::before {
+    transition-duration: .10s;
+
+    opacity: .1;
+  }
+
+  & > .content > .article-name {
+    color: $color-strong;
+  }
+
+  & > .content > .article-name .bold {
+    color: $color-bullfrog;
+  }
+}

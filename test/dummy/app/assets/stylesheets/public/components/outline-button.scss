@@ -1,0 +1,36 @@
+.outline-button {
+  $size-text: 18;
+
+  font-family: $font-family-gilroy;
+  font-weight: $font-weight-bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding-top: .25em;
+
+  cursor: pointer;
+  transition: .23s all cubic-bezier(0, -.01, .16, 1.01);
+  letter-spacing: 1px;
+
+  color: $color-bullfrog;
+  border: 2px solid $color-bullfrog;
+  border-radius: 100px;
+  background-color: transparent;
+
+  @include responsive-prop(font-size, $size-text, $size-text);
+  @include responsive-prop(min-width, 198, 198);
+  @include responsive-prop(height, 50, 50);
+  @include responsive-prop(padding-left, 30, 36);
+  @include responsive-prop(padding-right, 30, 36);
+
+  &:hover {
+    transition: none;
+
+    color: #FFF;
+    border-color: $color-brand;
+    background-color: $color-brand;
+  }
+}

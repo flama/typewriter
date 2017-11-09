@@ -1,0 +1,57 @@
+%numbered-list,
+%bulleted-list {
+  $size-list: 18;
+  $size-number: 14;
+
+  list-style-type: none;
+
+  counter-reset: item;
+
+  color: $color-bullfrog;
+
+  & > li {
+    line-height: 1.7;
+
+    position: relative;
+    @include responsive-prop(font-size, $size-list, $size-list);
+    @include responsive-prop(margin-top, 24, 24);
+  }
+
+  & > li::before {
+    font-family: $font-family-gilroy;
+    font-weight: $font-weight-bold;
+    line-height: 0;
+
+    position: absolute;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+
+    content: '';
+    text-align: center;
+
+    border-style: solid;
+    border-radius: 50%;
+
+    @include responsive-prop(font-size, $size-number, $size-number);
+    @include responsive-prop(left, -30, -30);
+    @include responsive-prop(width, 10, 10);
+    @include responsive-prop(height, 10, 10);
+    @include responsive-prop(margin-top, 10, 10);
+    @include responsive-prop(margin-right, 24, 24);
+    @include responsive-prop(border-width, 2, 2);
+  }
+}
+
+%numbered-list > li::before {
+  line-height: 1.6;
+
+  content: counter(item) '';
+  counter-increment: item;
+
+  @include responsive-prop(width, 24, 24);
+  @include responsive-prop(height, 24, 24);
+  @include responsive-prop(margin-top, 2, 2);
+  @include responsive-prop(left, -40, -40);
+}

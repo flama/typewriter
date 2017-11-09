@@ -1,0 +1,19 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:9.5.6
+  engine:
+    build: .
+    command: bin/server
+    ports:
+      - 8080:3000 # puma
+      - 3065:3065 # webpacker
+      - 1048:1048 # Byebug
+    # volumes:
+    #   - .:/engine
+    #   - ./gems:/gems
+    #   - ./yarn_modules:/yarn_modules
+    depends_on:
+      - postgres
+    environment:
+      - PORT=3000

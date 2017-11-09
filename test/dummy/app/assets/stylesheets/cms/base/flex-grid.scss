@@ -1,0 +1,3 @@
+@mixin flex-grid($cols) {
+	flex: 0 0 calc(#{100% / $cols} - 20px);
+}

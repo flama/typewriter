@@ -1,0 +1,16 @@
+.moment-hero {
+  font-family: $font-family-gilroy;
+
+  display: flex;
+
+  width: 100%;
+
+  & > .background {
+    position: relative;
+
+    width: 100%;
+
+    @include responsive-prop(min-height, 100, 270);
+    @include responsive-prop(padding-bottom, 0, 87);
+  }
+}

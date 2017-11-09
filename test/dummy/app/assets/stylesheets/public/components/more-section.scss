@@ -1,0 +1,23 @@
+.more-section {
+  background-color: currentColor;
+
+  & > .content > * {
+    color: #FFF;
+  }
+
+  h2,
+  h3 {
+    @include responsive-prop(margin-top, 40, 40);
+  }
+
+  p {
+    @include responsive-prop(margin-top, 10, 16);
+    @include responsive-prop(line-height, 28, 32);
+    @include responsive-prop(font-size, 18, 18);
+  }
+
+  h2 {
+    @include responsive-prop(line-height, 33, 40);
+    @include responsive-prop(font-size, 24, 32);
+  }
+}

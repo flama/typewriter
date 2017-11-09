@@ -1,0 +1,47 @@
+.moment-card {
+  $size-title: 26;
+  $size-title-mobile: 22;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  & > .title {
+    font-weight: $font-weight-bold;
+    line-height: 1;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+  }
+
+  & > .image {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include responsive-prop(background-position, 0, -15);
+    @include responsive-prop(width, 100, 100);
+    @include responsive-prop(height, 100, 100);
+    @include responsive-prop(margin-right, 12, 1);
+  }
+
+  &.-one > .image {
+    background-image: url(image_path('moments/circle-moment-1.svg'));
+  }
+
+  &.-two > .image {
+    background-image: url(image_path('moments/circle-moment-2.svg'));
+  }
+
+  &.-three > .image {
+    background-image: url(image_path('moments/circle-moment-3.svg'));
+  }
+
+  &.-four > .image {
+    background-image: url(image_path('moments/circle-moment-4.svg'));
+  }
+
+  &.-five > .image {
+    background-image: url(image_path('moments/circle-moment-5.svg'));
+  }
+}

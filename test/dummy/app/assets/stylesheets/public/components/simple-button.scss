@@ -1,0 +1,36 @@
+.simple-button {
+  $font-size: 18;
+
+  font-family: $font-family-gilroy;
+  font-weight: $font-weight-bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: .23s all cubic-bezier(0, -.01, .16, 1.01);
+  letter-spacing: 1px;
+
+  border: 2px solid #FFF;
+  border-radius: 100px;
+  background-color: #FFF;
+
+  @include responsive-prop(font-size, $font-size, $font-size);
+  @include responsive-prop(min-width, 198, 198);
+  @include responsive-prop(height, 50, 50);
+  @include responsive-prop(padding-top, 2, 2);
+  @include responsive-prop(padding-left, 30, 42);
+  @include responsive-prop(padding-right, 30, 42);
+
+  &:hover {
+    transition: none;
+
+    color: #FFF;
+    background-color: transparent;
+  }
+
+  @mixin huge-up {
+    @include responsive-prop(width, 300, 300);
+  }
+}

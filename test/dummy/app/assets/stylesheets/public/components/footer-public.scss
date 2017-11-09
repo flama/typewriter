@@ -1,0 +1,62 @@
+.footer-public {
+  $font-size: 12;
+  $font-size-brand: 24;
+  $font-size-brand-mobile: 20;
+
+  font-weight: $font-weight-bold;
+
+  position: relative;
+  z-index: z-index(top);
+
+  display: flex;
+  align-items: stretch;
+
+  border-top: 1px solid $color-divisor;
+
+  @include responsive-prop(font-size, $font-size, $font-size);
+  @include responsive-prop(height, 70, 100);
+  @include small-only {
+    justify-content: center;
+
+    border-bottom: none;
+  }
+
+  a {
+    color: $color-bullfrog;
+  }
+
+  & > .content {
+    @extend .wrapper-container;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100%;
+  }
+
+  & > .content > .brand {
+    font-family: $font-family-gilroy;
+
+    margin-right: auto;
+
+    @include responsive-prop(font-size, $font-size-brand-mobile, $font-size-brand);
+  }
+
+  & > .content > .item {
+    font-weight: $font-weight-semi-bold;
+
+    color: $color-strong;
+
+    @include responsive-prop(font-size, 14);
+    @include responsive-prop(margin-left, 32, 16);
+    @include medium-up {
+      color: #000;
+    }
+  }
+
+  &.-with-background {
+    border: none;
+    background-color: $color-wall;
+  }
+}

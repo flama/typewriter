@@ -1,0 +1,227 @@
+.page-article {
+  $size-title-major: 32;
+  $size-title: 26;
+  $size-title-mobile: 24;
+  $size-date: 18;
+  $size-date-mobile: 15;
+  $height-major: 210;
+  $height: 180;
+
+  @include responsive-prop(padding-bottom, 100, 100);
+
+  & > .moment-hero > .background {
+    background-color: $color-brand;
+
+    @include responsive-prop(height, 285, 360);
+    @include responsive-prop(padding-bottom, 200, 440);
+  }
+
+  & > .moment-hero > .background > .hero-content {
+    align-items: flex-start;
+    height: 100%;
+
+    color: #FFF;
+
+    @include responsive-prop(margin-top, 32);
+
+    @include medium-up {
+      width: 80vw;
+    }
+  }
+
+  & > .moment-hero > .background > .hero-content > .simple-divisor {
+    background-color: #FFF;
+  }
+
+  & > .moment-hero > .background > .hero-content > .title {
+    line-height: 1;
+
+    @include small-only {
+      line-height: 1.4;
+    }
+  }
+
+  & > .moment-hero > .background > .hero-content > .subtitle {
+    line-height: 1.4;
+
+    width: 89%;
+
+    @include responsive-prop(margin-top, 20);
+    @include small-only {
+      width: 100%;
+    }
+  }
+
+  & > .container {
+    @extend .wrapper-container;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @include responsive-prop(margin-top, -180, -500);
+  }
+
+  & > .container > .article-card:hover > .content > .article-name > span {
+    background-size: 100% 100%;
+  }
+
+  & > .container > .article-card > .image {
+    width: 100%;
+
+    @include responsive-prop(height, $height-major, $height);
+  }
+
+  & > .container > .article-card > .image > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  & > .container > .article-card:first-child {
+    @include medium-up {
+      @include flex-grid(1);
+    }
+  }
+
+  & > .container > .article-card:first-child > .content {
+    @include medium-up {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      @include responsive-prop(margin-top, 38, 38);
+    }
+  }
+
+  & > .container > .article-card:first-child > .content > .article-name {
+    @include medium-up {
+      width: 55%;
+    }
+    @include medium-only {
+      width: 100%;
+    }
+  }
+
+  & > .container > .article-card:first-child > .image {
+    @include responsive-prop(height, 300, 480);
+  }
+
+  & > .container > .article-card:first-child > .content > .date {
+    @include medium-up {
+      margin-top: 0;
+
+      @include responsive-prop(width, 200, 200);
+    }
+  }
+
+  & > .container > .article-card:nth-child(2),
+  & > .container > .article-card:nth-child(3) {
+    @include medium-up {
+      @include flex-grid(2);
+    }
+  }
+
+  & > .container > .article-card:nth-child(2) > .image,
+  & > .container > .article-card:nth-child(3) > .image {
+    @include responsive-prop(height, $height, 350);
+    @include medium-only {
+      height: #{$height / 10}vw;
+    }
+  }
+
+  & > .container > .article-card:nth-child(2) > .content,
+  & > .container > .article-card:nth-child(3) > .content {
+    @include responsive-prop(margin-top, 24, 24);
+  }
+
+  & > .container > .article-card:nth-child(2) > .content > .article-name,
+  & > .container > .article-card:nth-child(3) > .content > .article-name {
+    @include responsive-prop(font-size, $size-title, $size-title-major);
+  }
+
+  @for $i from 1 through 3 {
+    & > .container > .article-card:nth-child(#{$i}) {
+      @include small-only {
+        @include flex-grid(1);
+
+        & > .image {
+          @include responsive-prop(height, $height-major);
+        }
+
+        & > .content > .article-name {
+          @include responsive-prop(font-size, $size-title-mobile);
+        }
+      }
+    }
+  }
+}
+
+.page-article.-inquietacao {
+  & > .moment-hero > .background {
+    background-color: $color-moment-inquietacao;
+  }
+
+  & > .container > .article-card > .image::before {
+    background-color: $color-moment-inquietacao;
+  }
+
+  & > .container > .article-card > .content > .article-name > span {
+    background-image: linear-gradient(180deg, transparent 65%, rgba($color-moment-inquietacao, .1) 0);
+  }
+}
+
+.page-article.-caos {
+  & > .moment-hero > .background {
+    background-color: $color-moment-caos;
+  }
+
+  & > .container > .article-card > .image::before {
+    background-color: $color-moment-caos;
+  }
+
+  & > .container > .article-card > .content > .article-name > span {
+    background-image: linear-gradient(180deg, transparent 65%, rgba($color-moment-caos, .1) 0);
+  }
+}
+
+.page-article.-abertura {
+  & > .moment-hero > .background {
+    background-color: $color-moment-abertura;
+  }
+
+  & > .container > .article-card > .image::before {
+    background-color: $color-moment-abertura;
+  }
+
+  & > .container > .article-card > .content > .article-name > span {
+    background-image: linear-gradient(180deg, transparent 65%, rgba($color-moment-abertura, .1) 0);
+  }
+}
+
+.page-article.-preparacao {
+  & > .moment-hero > .background {
+    background-color: $color-moment-preparacao;
+  }
+
+  & > .container > .article-card > .image::before {
+    background-color: $color-moment-preparacao;
+  }
+
+  & > .container > .article-card > .content > .article-name > span {
+    background-image: linear-gradient(180deg, transparent 65%, rgba($color-moment-preparacao, .1) 0);
+  }
+}
+
+.page-article.-mudanca {
+  & > .moment-hero > .background {
+    background-color: $color-moment-mudanca;
+  }
+
+  & > .container > .article-card > .image::before {
+    background-color: $color-moment-mudanca;
+  }
+
+  & > .container > .article-card > .content > .article-name > span {
+    background-image: linear-gradient(180deg, transparent 65%, rgba($color-moment-mudanca, .1) 0);
+  }
+}

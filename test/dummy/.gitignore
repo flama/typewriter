@@ -1,0 +1,12 @@
+# Ignore all logfiles and tempfiles.
+log/*
+tmp/*
+!log/.keep
+!tmp/.keep
+node_modules
+
+# Webpacker
+public/packs
+public/packs-test
+
+yarn-error.log

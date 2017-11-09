@@ -1,0 +1,138 @@
+.icon-present {
+  width: 25px;
+  height: 25px;
+
+  background-color: $color-night;
+
+  &.-bag {
+    @include mask-image(image_path('icones/bag.svg'));
+  }
+
+  &.-book {
+    @include mask-image(image_path('icones/book.svg'));
+  }
+
+  &.-boxing {
+    @include mask-image(image_path('icones/boxing.svg'));
+  }
+
+  &.-brain {
+    @include mask-image(image_path('icones/brain.svg'));
+  }
+
+  &.-bridge {
+    @include mask-image(image_path('icones/bridge.svg'));
+  }
+
+  &.-brightness {
+    @include mask-image(image_path('icones/brightness.svg'));
+  }
+
+  &.-calendar {
+    @include mask-image(image_path('icones/calendar.svg'));
+  }
+
+  &.-compass {
+    @include mask-image(image_path('icones/compass.svg'));
+  }
+
+  &.-curious {
+    @include mask-image(image_path('icones/curious.svg'));
+  }
+
+  &.-discuss {
+    @include mask-image(image_path('icones/discuss.svg'));
+  }
+
+  &.-game {
+    @include mask-image(image_path('icones/game.svg'));
+  }
+
+  &.-genius {
+    @include mask-image(image_path('icones/genius.svg'));
+  }
+
+  &.-gift {
+    @include mask-image(image_path('icones/gift.svg'));
+  }
+
+  &.-hand-washing {
+    @include mask-image(image_path('icones/hand-washing.svg'));
+  }
+
+  &.-hand {
+    @include mask-image(image_path('icones/hand.svg'));
+  }
+
+  &.-happy {
+    @include mask-image(image_path('icones/happy.svg'));
+  }
+
+  &.-hear {
+    @include mask-image(image_path('icones/hear.svg'));
+  }
+
+  &.-heart {
+    @include mask-image(image_path('icones/heart.svg'));
+  }
+
+  &.-lamp {
+    @include mask-image(image_path('icones/lamp.svg'));
+  }
+
+  &.-map {
+    @include mask-image(image_path('icones/map.svg'));
+  }
+
+  &.-mountain {
+    @include mask-image(image_path('icones/mountain.svg'));
+  }
+
+  &.-mouse {
+    @include mask-image(image_path('icones/mouse.svg'));
+  }
+
+  &.-mustache {
+    @include mask-image(image_path('icones/mustache.svg'));
+  }
+
+  &.-newspaper {
+    @include mask-image(image_path('icones/newspaper.svg'));
+  }
+
+  &.-paperclip {
+    @include mask-image(image_path('icones/paperclip.svg'));
+  }
+
+  &.-pencil {
+    @include mask-image(image_path('icones/pencil.svg'));
+  }
+
+  &.-plant {
+    @include mask-image(image_path('icones/plant.svg'));
+  }
+
+  &.-puzzle {
+    @include mask-image(image_path('icones/puzzle.svg'));
+  }
+
+  &.-sheep {
+    @include mask-image(image_path('icones/sheep.svg'));
+  }
+
+  &.-slide {
+    @include mask-image(image_path('icones/slide.svg'));
+  }
+
+  &.-sun {
+    @include mask-image(image_path('icones/sun.svg'));
+  }
+
+  &.-thermometer {
+    @include mask-image(image_path('icones/thermometer.svg'));
+  }
+
+  &.-write {
+    @include mask-image(image_path('icones/write.svg'));
+  }
+}

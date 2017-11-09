@@ -1,0 +1,98 @@
+.page-inline-form {
+  $size-placeholder: $font-size-base;
+  // body minus navbar
+
+  min-height: calc(100vh - 80px);
+
+  grid-column: 2 / 14;
+
+  & > .title {
+    margin-top: 66px;
+  }
+
+  & > .form {
+    display: flex;
+
+    margin-top: 60px;
+  }
+
+  & > .form > .input {
+    width: 354px;
+    margin-right: 20px;
+  }
+
+  & > .form > .input.-small {
+    width: 168px;
+  }
+
+  & > .form .input > label {
+    font-weight: $font-weight-medium;
+
+    margin-bottom: 8px;
+  }
+
+  & > .form > .component > .dropdown-menu {
+    height: inherit;
+  }
+
+  & > .form > .component > .dropdown-menu > .name {
+    font-size: $size-placeholder;
+    font-weight: $font-weight-regular;
+
+    justify-content: space-between;
+
+    width: 118px;
+    height: 46px;
+    margin-right: 18px;
+    padding: 0 20px;
+
+    text-transform: none;
+
+    color: $color-light;
+    border: 1px solid $color-light;
+  }
+
+  & > .form > .component > .dropdown-menu.error > .name {
+    border-color: $color-fire-heavy;
+  }
+
+  & > .form > .component > .dropdown-menu > .name::after {
+    width: 20px;
+    height: 10px;
+  }
+
+  & > .form > .component > .dropdown-menu > input {
+    // REVIEW: maybe use something less destructive, so the tests can actually reach it?
+    display: none;
+  }
+
+  & > .form > .component > .dropdown-menu > .menu {
+    top: 80px;
+    left: 0;
+
+    width: 300px;
+  }
+
+  & > .form > .component > .dropdown-menu > .menu > .box > .item::before {
+    margin-right: 0;
+  }
+
+  & > .form > .submit {
+    align-self: flex-end;
+
+    width: 263px;
+  }
+
+  & > .cancel {
+    display: block;
+
+    margin-top: 48px;
+  }
+
+  .field-error {
+    position: absolute;
+
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}

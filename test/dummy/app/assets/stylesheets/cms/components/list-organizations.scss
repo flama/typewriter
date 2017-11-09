@@ -1,0 +1,93 @@
+.list-organizations {
+  @extend .list-items;
+
+  & > .item {
+    @extend %list-item;
+    grid-template-columns: $global-size-wrapper 1fr 4fr 2fr 5fr $global-size-wrapper;
+  }
+
+  & > .item:hover {
+    cursor: auto;
+
+    background-color: #FFF;
+  }
+
+  & > .item > .count {
+    font-size: $font-size-small;
+
+    flex-grow: 10;
+
+    color: $color-light;
+  }
+
+  & > .item > .actions {
+    justify-self: end;
+  }
+
+
+  & > .item > .actions {
+    display: inline-flex;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  & > .item > .actions > .item {
+    font-size: $font-size-micro;
+    font-weight: $font-weight-medium;
+
+    height: 100%;
+    padding: 0 20px;
+
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #000;
+  }
+
+  & > .item > .actions > .item,
+  & > .item > .actions > .item::before {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    content: '';
+  }
+
+  & > .item > .actions > .item::before {
+    background-color: #000;
+  }
+
+  & > .item > .actions > .item:hover {
+    color: $color-system;
+  }
+
+  & > .item > .actions > .item:hover::before {
+    background-color: $color-system;
+  }
+
+  & > .item > .actions > .item.-activate::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+
+    @include mask-image(image_path('icon_activate.svg'));
+  }
+
+  & > .item > .actions > .item.-cancel::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+
+    @include mask-image(image_path('icon_cancel.svg'));
+  }
+
+  & > .item > .actions > .item.-deactivate::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+
+    @include mask-image(image_path('icon_deactivate.svg'));
+  }
+}

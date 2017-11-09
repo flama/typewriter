@@ -1,0 +1,53 @@
+.page-list {
+  margin-bottom: -1px;
+
+  border-top: 1px solid $color-divisor;
+
+  & > .simple-header,
+  & > .moment-list > .moment > .wrapper {
+    @extend .wrapper-container;
+  }
+
+  & > .simple-header {
+    @include responsive-prop(min-height, 400, 670);
+  }
+
+  & > .simple-header > .simple-divisor {
+    @include responsive-prop(margin-top, 16, 16);
+  }
+
+  & > .simple-header > .outline-button {
+    @include responsive-prop(margin-top, 42, 50);
+    @include small-only {
+      display: flex;
+
+      width: 100%;
+    }
+  }
+
+  & > .simple-header > .simple-link {
+    @extend .reference-highlight;
+
+    font-family: $font-family-open-sans;
+    font-weight: $font-weight-regular;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background-image: linear-gradient(#FFF, #FFF), linear-gradient(#FFF, #FFF), linear-gradient($color-brand, $color-brand);
+
+    @include responsive-prop(letter-spacing, .78, 1);
+    @include responsive-prop(font-size, 12, 15);
+    @include responsive-prop(margin-top, 20, 24);
+  }
+
+  & > .simple-header > .simple-link:hover {
+    color: $color-brand;
+  }
+
+  & > .moment-list {
+    @include responsive-prop(margin-top, 60, 80);
+  }
+}

@@ -1,0 +1,10 @@
+$field-error-font-size: $font-size-micro;
+
+.field-error {
+  font-size: $field-error-font-size;
+  font-weight: $font-weight-regular;
+
+  margin-top: 6px;
+
+  color: $color-fire-heavy;
+}

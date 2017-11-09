@@ -1,0 +1,14 @@
+.author-name {
+  $font-size: 20;
+
+  @extend %link;
+
+  font-family: $font-family-open-sans;
+  font-weight: $font-weight-regular;
+  font-style: normal;
+
+  display: inline-block;
+
+  @include responsive-prop(font-size, $font-size, $font-size);
+  @include responsive-prop(margin-top, 36, 36);
+}

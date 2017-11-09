@@ -1,0 +1,250 @@
+.page-home {
+  $gap: 20px;
+  $size-title: 48;
+  $size-title-mobile: 38;
+  $size-text: 18;
+
+  text-align: center;
+
+  @include large-up {
+    text-align: left;
+  }
+
+  & > .full-header {
+    // always in sync with .navbar-public height
+    @include responsive-prop(margin-top, -71, -133);
+    @include responsive-prop(padding-bottom, 72, 160);
+  }
+
+  & > .full-header > .content {
+    @extend .wrapper-container;
+
+    @include responsive-prop(margin-top, 55, 70);
+  }
+
+  & > .full-header > .simple-button {
+    @include responsive-prop(margin-top, 50, 46);
+    @include responsive-prop(padding-left, 40, 40);
+    @include responsive-prop(padding-right, 40, 40);
+    @include small-only {
+      display: flex;
+    }
+  }
+
+  & > .full-header > .simple-link {
+    font-family: $font-family-open-sans;
+
+    margin: 0 auto;
+
+    @include responsive-prop(margin-top, 17, 24);
+    @include small-only {
+      width: 60%;
+    }
+  }
+
+  & > .motivation {
+    @extend .wrapper-container;
+
+    @include responsive-prop(margin-top, 53, -70);
+    @include medium-up {
+      position: relative;
+      z-index: z-index(overlay);
+
+      width: 980px / 1440px * 100vw;
+
+      background-color: #FFF;
+
+      @include responsive-prop(padding-left, 0, 100);
+      @include responsive-prop(padding-right, 0, 100);
+      @include responsive-prop(padding-top, 0, 90);
+    }
+  }
+
+  & > .motivation > .title {
+    line-height: 1.2;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+    @include small-only {
+      line-height: 1.1;
+    }
+  }
+
+  & > .motivation > .description {
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+
+    color: $color-strong;
+
+    @include medium-up {
+      font-weight: $font-weight-regular;
+    }
+    @include responsive-prop(margin-top, 18, 20);
+    @include responsive-prop(font-size, $size-text, $size-text);
+  }
+
+  & > .motivation > .columns {
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    @include responsive-prop(margin-top, 24, 17);
+    @include responsive-prop(margin-left, 0, -26);
+    @include large-up {
+      flex-wrap: nowrap;
+    }
+  }
+
+  & > .motivation > .columns > .column > p {
+    line-height: 1.7;
+
+    color: $color-strong;
+
+    @include medium-up {
+      max-width: 80%;
+      margin: 0 auto;
+
+      @include responsive-prop(margin-top, 16);
+    }
+  }
+
+  & > .motivation > .columns > .column > .icon {
+    margin: 0 auto;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include responsive-prop(width, 130, 100);
+    @include responsive-prop(height, 130, 100);
+  }
+
+  & > .motivation > .columns > .column > .icon.-way {
+    background-image: url(image_path('icon-way.svg'));
+  }
+
+  & > .motivation > .columns > .column > .icon.-lost {
+    background-image: url(image_path('icon-lost.svg'));
+  }
+
+  & > .motivation > .columns > .column > .icon.-love {
+    background-image: url(image_path('icon-love.svg'));
+  }
+
+  & > .action-box {
+    @extend .wrapper-container;
+
+    @include responsive-prop(margin-top, 80, 50);
+    @include medium-down {
+      width: 100vw;
+    }
+  }
+
+  & > .action-box > .simple-button {
+    @include responsive-prop(margin-top, 32);
+  }
+
+  & > .methodology {
+    background-color: $color-whitesmoke;
+
+    @include responsive-prop(margin-top, 0, -100);
+    @include responsive-prop(padding-top, 50, 160);
+    @include responsive-prop(padding-bottom, 60, 90);
+  }
+
+  & > .methodology > .content {
+    width: 82vw;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: left;
+
+    @include responsive-prop(margin-top, 16, 10);
+    @include medium-up {
+      width: 70vw;
+    }
+  }
+
+  & > .methodology > .content > .title {
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+  }
+
+  & > .methodology > .content > .title,
+  & > .methodology > .content > .description {
+    text-align: left;
+  }
+
+  & > .methodology > .content > .description {
+    line-height: 1.8;
+
+    color: $color-bullfrog;
+
+    @include medium-up {
+      color: $color-strong;
+    }
+    @include huge-up {
+      width: 85%;
+    }
+    @include responsive-prop(margin-top, 10, 17);
+    @include responsive-prop(font-size, $size-text, $size-text);
+  }
+
+  & > .methodology > .content > .moments {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include responsive-prop(margin-top, 20, 20);
+    @include medium-up {
+      flex-direction: row;
+    }
+  }
+
+  & > .methodology > .content > .moments > .moment-card {
+    width: 100%;
+
+    @include medium-only {
+      width: 50%;
+    }
+    @include large-up {
+      width: 33%;
+    }
+  }
+
+  & > .methodology > .content > .moments > .moment-card:hover > .title {
+    background-size: 100% 100%;
+  }
+
+  & > .methodology > .content > .link-arrow {
+    margin-right: auto;
+
+    @include responsive-prop(margin-top, 32, 49);
+  }
+
+  & > .testimonial-section {
+    @extend .wrapper-container;
+
+    @include responsive-prop(margin-top, 60, 60);
+    @include responsive-prop(margin-bottom, 60, 60);
+  }
+
+  & > .clients-box {
+    @extend .wrapper-container;
+  }
+
+  & > .action-box.-full {
+    width: 100vw;
+
+    @include responsive-prop(margin-top, 72, 72);
+    @include medium-only {
+      padding-right: 9vw;
+      padding-left: 9vw;
+    }
+
+    @include large-up {
+      padding-right: 14vw;
+      padding-left: 14vw;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+$simple-header-font-size-title: 140px;
+$simple-header-font-size-title-tablet: 120px;
+$simple-header-font-size-title-mobile: 52px;
+$simple-header-font-size-text: 48px;
+$simple-header-font-size-text-tablet: 32px;
+$simple-header-font-size-text-mobile: 22px;
+
+.simple-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+
+   > .title {
+    font-size: $simple-header-font-size-title-mobile;
+    line-height: $simple-header-font-size-title-mobile;
+
+    width: 100%;
+    margin-top: 50px;
+
+    letter-spacing: -1px;
+
+    color: $color-bullfrog;
+
+    @include medium-only {
+      font-size: $simple-header-font-size-title-tablet;
+      line-height: $simple-header-font-size-title-tablet;
+
+      margin-top: 70px;
+
+      letter-spacing: normal;
+    }
+    @include large-up {
+      font-size: $simple-header-font-size-title;
+      font-weight: $font-weight-bold;
+      line-height: $simple-header-font-size-title;
+
+      margin-top: 100px;
+
+      letter-spacing: -2px;
+    }
+  }
+
+   > .subtitle {
+    font-family: $font-family-gilroy;
+    font-size: $simple-header-font-size-text;
+    font-weight: $font-weight-regular;
+    line-height: 60px;
+
+    width: 80%;
+    margin-top: 16px;
+
+    @include small-only {
+      font-size: $simple-header-font-size-text-mobile;
+      line-height: 31px;
+
+      width: 100%;
+    }
+    @include medium-only {
+      font-size: $simple-header-font-size-text-tablet;
+      line-height: 40px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+body {
+  font-family: $font-family-open-sans;
+  font-size: $font-size-base;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-family-gilroy;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+h1 {
+  @include responsive-prop(font-size, 38, 72);
+}
+
+h2 {
+  @include responsive-prop(font-size, 32, 48);
+}
+
+h3 {
+  @include responsive-prop(font-size, 24, 32);
+}

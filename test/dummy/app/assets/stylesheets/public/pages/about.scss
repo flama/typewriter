@@ -1,0 +1,114 @@
+.page-about {
+  color: $color-brand;
+
+  @include responsive-prop(padding-bottom, -100, -100);
+
+  * {
+    outline: none;
+  }
+
+  & > .moment-hero > .background {
+    background-color: $color-brand;
+
+    @include responsive-prop(height, 422, 471);
+    @include responsive-prop(padding-bottom, 73, 176);
+    @include responsive-prop(padding-top, 0, 49);
+  }
+
+  & > .moment-hero > .background > .hero-content {
+    height: 100%;
+
+    color: #FFF;
+  }
+
+  & > .moment-hero > .background > .hero-content > .simple-divisor {
+    @include responsive-prop(margin-top, 20, 22);
+  }
+
+  & > .article-section > .image {
+    overflow: hidden;
+
+    width: 82vw;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include responsive-prop(margin-top, -62, -176);
+  }
+
+  & > .article-section > .image > img {
+    width: 100%;
+
+    @include responsive-prop(height, 210, 478);
+  }
+
+  & > .article-section > h1 {
+    @include responsive-prop(margin-top, 27, 60);
+    @include responsive-prop(margin-bottom, -8, -8);
+  }
+
+  & > .article-section > .article-citation {
+    @include responsive-prop(margin-top, 40);
+  }
+
+  & > .article-section > .more-section {
+    @include responsive-prop(margin-top, 63, 82);
+    @include responsive-prop(padding-top, 55, 78);
+    @include responsive-prop(padding-bottom, 43, 70);
+  }
+
+  & > .article-section > .more-section > .content > h1 {
+    @include responsive-prop(margin-bottom, -24, -24);
+  }
+
+  & > .action-box {
+    position: relative;
+
+    width: 100%;
+    margin: 0 auto;
+
+    @include responsive-prop(padding-top, 42, 60);
+    @include responsive-prop(padding-right, 33, 103);
+    @include responsive-prop(padding-bottom, 42, 60);
+    @include responsive-prop(padding-left, 33, 103);
+    @include medium-up {
+      width: 82vw;
+    }
+  }
+
+  & > .action-box::before,
+  & > .action-box::after {
+    position: absolute;
+    z-index: z-index(under);
+    left: -9vw;
+
+    display: block;
+
+    width: 100vw;
+    height: 50%;
+
+    content: '';
+  }
+
+  & > .action-box::before {
+    top: 0;
+
+    background-color: $color-brand;
+  }
+
+  & > .action-box::after {
+    bottom: 0;
+
+    background-color: $color-wall;
+  }
+
+  & > .action-box > .text {
+    width: 100%;
+
+    text-align: center;
+
+    @include responsive-prop(line-height, 30, 42);
+    @include medium-up {
+      width: 90%;
+    }
+  }
+}

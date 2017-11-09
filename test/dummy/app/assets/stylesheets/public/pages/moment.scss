@@ -1,0 +1,295 @@
+.page-moment {
+  grid-column: 1 / 15;
+
+  * {
+    outline: none;
+  }
+
+  .moment-hero > .background {
+    background-color: currentColor;
+
+    @include responsive-prop(padding-bottom, 54, 190);
+  }
+
+  .tool-bar {
+    color: currentColor;
+
+    @include responsive-prop(margin-top, -54, -190);
+  }
+
+  & > .article-section.-minor {
+    & > p,
+    & > blockquote,
+    & > .article-list,
+    & > h1,
+    & > h2,
+    & > h3,
+    & > .article-media,
+    & > .article-media > .info,
+    & > .author,
+    & > .cover,
+    & > .moments,
+    & > .more-section > .content {
+      width: 82vw;
+      margin-right: auto;
+      margin-left: auto;
+
+      @include medium-up {
+        width: 72vw;
+      }
+      @include large-up {
+        width: 54vw;
+      }
+    }
+  }
+
+  .article-section > .article-list > .item::before {
+    border-color: currentColor;
+  }
+
+  .action-box {
+    width: 100vw;
+
+    @include large-up {
+      width: 82vw;
+      margin: 0 auto;
+
+      @include responsive-prop(margin-bottom, -60, -60);
+    }
+    @include responsive-prop(margin-top, 60, 60);
+  }
+
+  .action-box > .call > .moment-current {
+    @include responsive-prop(width, 182, 182);
+    @include responsive-prop(margin-bottom, 32, 12);
+  }
+
+  .moments-index {
+    align-items: center;
+
+    background-color: $color-whitesmoke;
+
+    @include responsive-prop(margin-top, 0, 60);
+    @include responsive-prop(padding-top, 53, 60);
+    @include responsive-prop(padding-bottom, 98, 101);
+  }
+
+  .moments-index > .content {
+    width: 76vw;
+    margin-left: 14vw;
+
+    @include small-only {
+      width: 82vw;
+      margin: 0 auto;
+    }
+  }
+
+  .moments-index > .content > .moments {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include medium-up {
+      flex-direction: row;
+    }
+  }
+
+  .moments-index > .content > .moments > .moment-card {
+    width: 100%;
+
+    @include medium-only {
+      width: 50%;
+    }
+    @include large-up {
+      width: 33%;
+    }
+    @include responsive-prop(margin-top, 32, 32);
+  }
+
+  .moments-index > .content > .moments > .moment-card:hover > .title {
+    background-size: 100% 100%;
+  }
+}
+
+.page-moment.-inquietacao {
+  color: $color-moment-inquietacao;
+
+  .moment-hero > .background > .hero-content > .character {
+    background-image: url(image_path('front/moment-full-1.svg'));
+
+    @include responsive-prop(top, -20, -20);
+    @include responsive-prop(width, 324, 324);
+    @include responsive-prop(height, 570, 570);
+    @include medium-only {
+      @include responsive-prop(right, -110, -110);
+      @include responsive-prop(width, 284, 284);
+      @include responsive-prop(height, 530, 530);
+    }
+  }
+
+  .article-section a {
+    background-image: linear-gradient(#FFF, #FFF), linear-gradient(#FFF, #FFF), linear-gradient($color-moment-inquietacao, $color-moment-inquietacao);
+  }
+
+  a:hover {
+    color: $color-moment-inquietacao;
+  }
+
+  .moment-section > .moment-media {
+    background-color: $color-moment-inquietacao;
+  }
+
+  .article-section ol > li::before,
+  .article-section ul > li::before {
+    color: $color-moment-inquietacao;
+  }
+
+  .article-section > .share-menu {
+    position: fixed;
+    z-index: z-index(top);
+
+    @include responsive-prop(top, 100, 100);
+    @include responsive-prop(left, 100, 100);
+    @include responsive-prop(margin-left, 60, 60);
+    @include medium-down {
+      display: none;
+    }
+  }
+}
+
+.page-moment.-caos {
+  color: $color-moment-caos;
+
+  .moment-hero > .background > .hero-content > .character {
+    background-image: url(image_path('front/moment-full-2.svg'));
+
+    @include responsive-prop(top, -20, -20);
+    @include responsive-prop(width, 275, 275);
+    @include responsive-prop(height, 570, 570);
+    @include medium-only {
+      @include responsive-prop(right, -80, -80);
+      @include responsive-prop(width, 245, 245);
+      @include responsive-prop(height, 530, 530);
+    }
+  }
+
+  .article-section a {
+    background-image: linear-gradient(#FFF, #FFF), linear-gradient(#FFF, #FFF), linear-gradient($color-moment-caos, $color-moment-caos);
+  }
+
+  a:hover {
+    color: $color-moment-caos;
+  }
+
+  .moment-section > .moment-media {
+    background-color: $color-moment-caos;
+  }
+
+  .article-section ol > li::before,
+  .article-section ul > li::before {
+    color: $color-moment-caos;
+  }
+}
+
+.page-moment.-abertura {
+  color: $color-moment-abertura;
+
+  .moment-hero > .background > .hero-content > .character {
+    background-image: url(image_path('front/moment-full-3.svg'));
+
+    @include responsive-prop(top, -20, -20);
+    @include responsive-prop(right, -110, -110);
+    @include responsive-prop(width, 413, 413);
+    @include responsive-prop(height, 510, 510);
+    @include medium-only {
+      @include responsive-prop(right, -145, -145);
+    }
+  }
+
+  .article-section a {
+    background-image: linear-gradient(#FFF, #FFF), linear-gradient(#FFF, #FFF), linear-gradient($color-moment-abertura, $color-moment-abertura);
+  }
+
+  a:hover {
+    color: $color-moment-abertura;
+  }
+
+  .moment-section > .moment-media {
+    background-color: $color-moment-abertura;
+  }
+
+  .article-section ol > li::before,
+  .article-section ul > li::before {
+    color: $color-moment-abertura;
+  }
+}
+
+.page-moment.-preparacao {
+  color: $color-moment-preparacao;
+
+  .moment-hero > .background > .hero-content > .character {
+    background-image: url(image_path('front/moment-full-4.svg'));
+
+    @include responsive-prop(top, -20, -20);
+    @include responsive-prop(right, -180, -180);
+    @include responsive-prop(width, 438, 438);
+    @include responsive-prop(height, 570, 570);
+    @include medium-only {
+      @include responsive-prop(right, -210, -210);
+      @include responsive-prop(width, 388, 388);
+      @include responsive-prop(height, 520, 520);
+    }
+  }
+
+  .article-section a {
+    background-image: linear-gradient(#FFF, #FFF), linear-gradient(#FFF, #FFF), linear-gradient($color-moment-preparacao, $color-moment-preparacao);
+  }
+
+  a:hover {
+    color: $color-moment-preparacao;
+  }
+
+  .moment-section > .moment-media {
+    background-color: $color-moment-preparacao;
+  }
+
+  .article-section ol > li::before,
+  .article-section ul > li::before {
+    color: $color-moment-preparacao;
+  }
+}
+
+.page-moment.-mudanca {
+  color: $color-moment-mudanca;
+
+  .moment-hero > .background > .hero-content > .character {
+    background-image: url(image_path('front/moment-full-5.svg'));
+
+    @include responsive-prop(top, -20, -20);
+    @include responsive-prop(right, -120, -120);
+    @include responsive-prop(width, 549, 549);
+    @include responsive-prop(height, 563, 563);
+    @include medium-only {
+      @include responsive-prop(right, -160, -160);
+      @include responsive-prop(width, 485, 485);
+      @include responsive-prop(height, 499, 499);
+    }
+  }
+
+  .article-section a {
+    background-image: linear-gradient(#FFF, #FFF), linear-gradient(#FFF, #FFF), linear-gradient($color-moment-mudanca, $color-moment-mudanca);
+  }
+
+  a:hover {
+    color: $color-moment-mudanca;
+  }
+
+  .moment-section > .moment-media {
+    background-color: $color-moment-mudanca;
+  }
+
+  .article-section ol > li::before,
+  .article-section ul > li::before {
+    color: $color-moment-mudanca;
+  }
+}

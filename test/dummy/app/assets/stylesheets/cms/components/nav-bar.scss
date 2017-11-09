@@ -1,0 +1,225 @@
+$nav-bar-height: 80px;
+$nav-bar-height-mobile: 50px;
+$nav-bar-font-size-brand: 20px;
+$nav-bar-font-size-item: $font-size-small;
+
+.nav-bar {
+  font-size: $nav-bar-font-size-brand;
+
+  position: relative;
+  z-index: z-index(overall);
+
+  align-items: center;
+
+  height: $nav-bar-height;
+
+  text-align: left;
+
+  border-bottom: 1px solid $color-fade;
+  background-color: #FFF;
+
+  @include grid-cols(14);
+
+  a {
+    text-decoration: none;
+
+    color: #000;
+  }
+}
+
+.nav-bar > .content {
+  display: flex;
+
+  grid-column: 2 / 8;
+}
+
+.nav-bar > .content > .brand {
+  margin-right: 50px;
+}
+
+.nav-bar .brand {
+  font-size: $nav-bar-font-size-brand;
+  font-weight: $font-weight-bold;
+
+  letter-spacing: .34px;
+}
+
+.nav-bar > .brand {
+  text-align: center;
+
+  grid-column: 7 / 9;
+}
+
+.nav-bar > .content > .item {
+  font-size: $nav-bar-font-size-item;
+  font-weight: $font-weight-medium;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-right: 32px;
+
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.nav-bar > .content > .item::before {
+  display: inline-block;
+
+  margin-right: 10px;
+
+  content: '';
+
+  background-color: #000;
+}
+
+.nav-bar > .content > .item:hover {
+  color: $color-system;
+
+  &::before {
+    background-color: $color-system;
+  }
+}
+
+.nav-bar > .content > .item.-active {
+  color: $color-system;
+
+  &::before {
+    background-color: $color-system;
+  }
+}
+
+.nav-bar > .content > .item.articles::before {
+  width: 16px;
+  height: 22px;
+
+  @include mask-image(image_path('articles.svg'));
+}
+
+.nav-bar > .content > .item.categories::before {
+  width: 21px;
+  height: 18px;
+
+  @include mask-image(image_path('icon_tag.svg'));
+}
+
+.nav-bar > .content > .item.tools::before {
+  width: 14px;
+  height: 20px;
+
+  @include mask-image(image_path('icon_lightning.svg'));
+}
+
+.nav-bar > .actions {
+  font-family: $font-family-roboto;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  height: 100%;
+
+  letter-spacing: .5px;
+  text-transform: uppercase;
+
+  grid-column: 8 / 14;
+}
+
+.nav-bar > .actions > .user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-bar > .actions > .user::before,
+.nav-bar > .actions > .profile.-organization > .dropdown-menu > .name::before {
+  display: inline-block;
+
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+
+  content: '';
+
+  background-image: url(image_path('user.svg'));
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-bar > .actions > .user > select {
+  font-family: $font-family-roboto;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+
+  width: auto;
+  padding-right: 22px;
+
+  cursor: pointer;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+
+  background: none;
+  background-image: url(image_path('icon_arrow_down.svg'));
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 14px;
+}
+
+.nav-bar > .actions > .user > select,
+.nav-bar > .actions > .user > select option {
+  text-align: right;
+}
+
+
+
+.nav-bar > .actions > .divisor {
+  align-self: center;
+
+  width: 1px;
+  height: 32px;
+  margin: 0 16px;
+
+  background-color: $color-invisible;
+}
+
+.nav-bar > .actions > .profile {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.nav-bar > .actions > .profile > .dropdown-menu > .name {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-bar > .actions > .profile:hover,
+.nav-bar > .actions > .profile.-hover {
+  // for system tests
+   > .dropdown-menu {
+    display: block;
+  }
+}
+
+.nav-bar > .actions > .profile > .dropdown-menu > .name::before {
+  display: block;
+
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+
+  content: '';
+
+  background-image: url(image_path('icon_profile.svg'));
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: 100%;
+}

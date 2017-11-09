@@ -1,0 +1,185 @@
+.page-how-works {
+  color: $color-brand;
+
+  grid-column: 1 / 15;
+
+  * {
+    outline: none;
+  }
+
+  & > .moment-hero > .background {
+    background-color: $color-brand;
+
+    @include responsive-prop(height, 418, 457);
+    @include medium-only {
+      @include responsive-prop(height, 520, 520);
+    }
+  }
+
+  & > .moment-hero > .background > .hero-content {
+    align-items: flex-start;
+
+    height: 100%;
+
+    color: #FFF;
+  }
+
+  & > .moment-hero > .background > .hero-content > .simple-divisor {
+    background-color: #FFF;
+
+    @include responsive-prop(margin-top, 16, 22);
+  }
+
+  & > .moment-hero > .background > .hero-content > .subtitle {
+    width: 100%;
+
+    @include responsive-prop(margin-top, 22, 13);
+    @include responsive-prop(line-height, 40, 56);
+    @include responsive-prop(font-size, 32, 36);
+    @include medium-up {
+      width: 89%;
+    }
+  }
+
+  & > .moment-section.-box {
+    margin: 0 auto;
+
+    @include responsive-prop(padding-top, 38, 90);
+    @include responsive-prop(margin-top, 0, -87);
+  }
+
+  & > .moment-section > .article-list > .item::before {
+    border-color: currentColor;
+  }
+
+  & > .moment-section > h1 {
+    @include responsive-prop(margin-bottom, -8, -8);
+  }
+
+  & > .moment-section > h2 {
+    @include responsive-prop(margin-top, 26, 40);
+    @include responsive-prop(margin-bottom, -5);
+  }
+
+  & > .moment-section > h3 {
+    @include responsive-prop(margin-top, 36, 37);
+    @include responsive-prop(margin-bottom, -6);
+  }
+
+  & > .moment-section > p > .reference-highlight,
+  & > .moment-section .author-name {
+    background-image: linear-gradient(180deg, transparent 65%, rgba($color-brand, .1) 0);
+  }
+
+  & > .moment-section > p > .reference-highlight,
+  & > .moment-section > .article-list > .item::before {
+    color: $color-brand;
+  }
+
+  & > .moment-section > .moment-media {
+    background-color: $color-brand;
+  }
+
+  & > .moment-section > .moments {
+    @include responsive-prop(margin-top, 10, 10);
+  }
+
+  & > .moment-section > .moments > .moment {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive-prop(margin-top, 40, 50);
+    @include medium-up {
+      flex-direction: row;
+    }
+  }
+
+  & > .moment-section > .moments > .moment > .icon {
+    flex: 1;
+
+    margin: 0 auto;
+
+    background-repeat: no-repeat;
+
+    @include responsive-prop(background-size, 130, 135);
+    @include responsive-prop(width, 130, 120);
+    @include responsive-prop(height, 130, 120);
+    @include responsive-prop(margin-top, -10, -10);
+  }
+
+  & > .moment-section > .moments > .moment.-inquietacao > .icon {
+    background-image: url(image_path('moments/circle-moment-1.svg'));
+  }
+
+  & > .moment-section > .moments > .moment.-caos > .icon {
+    background-image: url(image_path('moments/circle-moment-2.svg'));
+  }
+
+  & > .moment-section > .moments > .moment.-abertura > .icon {
+    background-image: url(image_path('moments/circle-moment-3.svg'));
+  }
+
+  & > .moment-section > .moments > .moment.-preparacao > .icon {
+    background-image: url(image_path('moments/circle-moment-4.svg'));
+  }
+
+  & > .moment-section > .moments > .moment.-mudanca > .icon {
+    background-image: url(image_path('moments/circle-moment-5.svg'));
+  }
+
+  & > .moment-section > .moments > .moment > .content {
+    flex: 3;
+
+    @include small-only {
+      text-align: center;
+
+      @include responsive-prop(margin-top, 18, 18);
+    }
+  }
+
+  & > .moment-section > .moments > .moment > .content > .name {
+    color: $color-bullfrog;
+  }
+
+  & > .moment-section > .moments > .moment > .content > .text {
+    color: $color-strong;
+
+    @include responsive-prop(font-size, 18, 18);
+    @include responsive-prop(line-height, 28, 28);
+    @include responsive-prop(margin-top, 15, 6);
+  }
+
+  & > .action-box {
+    width: 82vw;
+    margin: 0 auto;
+
+    @include responsive-prop(margin-top, 60, 60);
+    @include small-only {
+      width: 100%;
+
+      @include responsive-prop(padding-top, 80, 80);
+      @include responsive-prop(padding-bottom, 80, 80);
+    }
+  }
+
+  & > .action-box > .simple-button {
+    @include small-only {
+      @include responsive-prop(margin-top, 37, 37);
+    }
+  }
+
+  & > .action-box::after {
+    position: absolute;
+    z-index: z-index(under);
+    bottom: 0;
+
+    display: block;
+
+    width: 100vw;
+    height: 50%;
+
+    content: '';
+
+    background-color: $color-wall;
+  }
+}

@@ -1,0 +1,22 @@
+@mixin inline-box {
+  padding: 0.2em 0;
+
+  &:before, &:after {
+    font-family: monospace;
+    letter-spacing: -0.2em;
+    content: "\00a0";
+  }
+}
+
+@mixin mask-image($image) {
+    background-image: url($image);
+    background-color: transparent;
+  //         mask-image: url($image);
+  // -webkit-mask-image: url($image);
+  //         mask-size: contain;
+  // -webkit-mask-size: contain;
+  //         mask-repeat: no-repeat;
+  // -webkit-mask-repeat: no-repeat;
+  // mask-repeat-position: center;
+  // -webkit-mask-position: center;
+}

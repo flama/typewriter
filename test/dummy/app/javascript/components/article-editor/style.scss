@@ -1,0 +1,52 @@
+
+@mixin inline-box {
+  padding: 0.2em 0;
+
+  &:before, &:after {
+    font-family: monospace;
+    letter-spacing: -0.2em;
+    content: "\00a0";
+  }
+}
+
+.article-section {
+
+  .title .placeholder {
+    color: #ccc;
+  }
+
+  p .placeholder {
+    color: #ccc;
+  }
+
+  em {
+    font-style: normal;
+    background-color: #d6e8fa;
+
+    @include inline-box;
+  }
+
+  code {
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+    @include inline-box;
+    padding: 0.4em 0;
+  }
+}
+
+.article {
+
+  em {
+    font-style: normal;
+    background-color: #d6e8fa;
+
+    @include inline-box;
+  }
+
+  code {
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+    @include inline-box;
+    padding: 0.4em 0;
+  }
+}

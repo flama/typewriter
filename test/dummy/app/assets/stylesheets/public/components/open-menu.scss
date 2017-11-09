@@ -1,0 +1,62 @@
+.open-menu {
+  $size: 20;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  transform: translateX(-100%);
+  text-transform: uppercase;
+
+  background-color: $color-brand;
+
+  & > .content {
+    width: 82vw;
+    margin: 0 auto;
+
+    @include responsive-prop(margin-top, 160, 160);
+  }
+
+  & > .content > a {
+    font-weight: $font-weight-semi-bold;
+
+    display: block;
+
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    color: #FFF;
+
+    @include responsive-prop(font-size, $size, $size);
+    @include responsive-prop(margin-top, 32, 32);
+  }
+}
+
+body.-open-menu {
+  overflow: hidden;
+
+  .open-menu {
+    display: block;
+
+    transition: transform .25s ease-in-out;
+    transform: translateX(0);
+  }
+
+  .navbar-public {
+    transform: translateX(0);
+  }
+
+  .navbar-public > .content > .brand,
+  .navbar-public > .content > .nav-burger {
+    z-index: z-index(overall);
+  }
+
+  .navbar-public > .content > .brand {
+    color: #FFF;
+  }
+}

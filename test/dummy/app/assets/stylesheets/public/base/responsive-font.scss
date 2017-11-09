@@ -1,0 +1,21 @@
+@mixin responsive-font($base, $quota) {
+  @include small-down {
+    font-size: $base / $quota;
+  }
+
+  @include medium-only {
+    font-size: $base / $quota;
+  }
+
+  @include large-only {
+    font-size: $base;
+  }
+
+  @include wide-only {
+    font-size: $base + $quota * 2;
+  }
+
+  @include superhuge-up {
+    font-size: $base + $quota * 3;
+  }
+}

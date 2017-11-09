@@ -1,0 +1,17 @@
+.video {
+  position: relative;
+
+  iframe {
+    width: 54.16vw;
+    height: 30.465vw; // 16:9
+  }
+}
+
+.video-input {
+  position: relative;
+
+  .embed {
+    width: 54.16vw;
+    height: 30.465vw; // 16:9
+  }
+}

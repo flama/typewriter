@@ -1,0 +1,11 @@
+.page-list {
+  margin-top: 42px;
+
+  grid-column: 1 / 15;
+
+  & > h1 {
+    font-weight: $font-weight-regular;
+
+    margin-left: $global-size-wrapper;
+  }
+}

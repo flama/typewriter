@@ -1,0 +1,123 @@
+.navbar-public {
+  $size: 13;
+  $size-button: 14;
+  $size-brand: 32;
+
+  font-weight: $font-weight-bold;
+
+  position: relative;
+  z-index: z-index(base);
+
+  display: flex;
+  align-items: stretch;
+
+  @include responsive-prop(font-size, $size, $size);
+  @include responsive-prop(height, 71, 133);
+  @include small-only {
+    justify-content: center;
+
+    border-bottom: none;
+  }
+
+  a {
+    color: #000;
+  }
+
+  & > .content {
+    @extend .wrapper-container;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  & > .content > .nav-burger {
+    @include medium-up {
+      display: none;
+    }
+  }
+
+  & > .content .brand {
+    font-family: $font-family-gilroy;
+
+    @include responsive-prop(font-size, $size-brand, $size-brand);
+    @include responsive-prop(margin-right, 80, 80);
+    @include medium-only {
+      @include responsive-prop(margin-right, 26, 26);
+    }
+    @include small-only {
+      margin: 0 auto;
+    }
+  }
+
+  & > .content > .item {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include responsive-prop(margin-left, 42, 42);
+    @include medium-only {
+      @include responsive-prop(margin-left, 30, 30);
+    }
+    @include small-only {
+      display: none;
+    }
+  }
+
+  & > .content > .moment-current,
+  & > .content > .outline-button {
+    margin-left: auto;
+
+    @include small-only {
+      display: none;
+    }
+  }
+
+  & > .content > .outline-button {
+    min-width: 0;
+    padding: 0 3ch;
+    line-height: 2;
+
+    @include responsive-prop(font-size, $size-button, $size-button);
+    @include responsive-prop(height, 38, 38);
+  }
+
+  &.-border {
+    border-bottom: 1px solid $color-divisor;
+  }
+}
+
+.navbar-public:not(.-home) {
+  .moment-current {
+    @extend %negative-moment-current;
+  }
+}
+
+.navbar-public.-home {
+  border: none;
+
+  a {
+    color: #FFF;
+  }
+
+  .nav-burger::before,
+  .nav-burger::after {
+    color: #FFF;
+    background-color: #FFF;
+  }
+
+  & > .content > .item {
+    background-image: linear-gradient(180deg, transparent 65%, rgba(#FFF, .3) 0);
+  }
+
+  & > .content > .outline-button {
+    border-color: #FFF;
+
+    &:hover {
+      color: $color-brand;
+      background-color: #FFF;
+    }
+  }
+}

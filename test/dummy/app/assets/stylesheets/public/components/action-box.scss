@@ -1,0 +1,145 @@
+.action-box {
+  $size: 26;
+  $size-mobile: 22;
+
+  font-family: $font-family-gilroy;
+  line-height: 1;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  text-align: center;
+
+  color: #FFF;
+  background-color: $color-crimson;
+
+  @include responsive-prop(font-size, $size-mobile, $size);
+  @include responsive-prop(padding-top, 40, 60);
+  @include responsive-prop(padding-right, 33, 80);
+  @include responsive-prop(padding-bottom, 55, 60);
+  @include responsive-prop(padding-left, 33, 80);
+  @include medium-up {
+    flex-direction: row;
+
+    text-align: inherit;
+  }
+  @include medium-only {
+    padding-left: 10vw;
+  }
+
+  & > .call {
+    flex: 3;
+
+    @include medium-only {
+      flex: 2;
+
+      text-align: left;
+    }
+  }
+
+  & > .call > .title {
+    font-weight: $font-weight-bold;
+    line-height: 1.8;
+
+    color: #FFF;
+
+    @include responsive-prop(font-size, $size-mobile, $size);
+    @include small-only {
+      line-height: 1.5;
+    }
+  }
+
+  & > .call > .subtitle {
+    @include responsive-prop(line-height, 30, 42);
+    @include responsive-prop(margin-top, 10);
+    @include medium-down {
+      @include responsive-prop(font-size, $size-mobile, $size-mobile);
+    }
+  }
+
+  & > .simple-button {
+    flex: 1;
+
+    color: $color-crimson;
+
+    @include responsive-prop(margin-top, 37, 0);
+    @include medium-down {
+      margin-left: 0;
+    }
+  }
+}
+
+.action-box.-brand {
+  line-height: 1.3;
+
+  flex-direction: column;
+
+  background-color: $color-brand;
+
+  & > .call {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+
+    @include large-up {
+      flex-direction: row;
+    }
+  }
+
+  & > .call > .title {
+    -ms-flex-order: 2;
+    order: 2;
+
+    margin-bottom: .5em;
+
+    @include large-up {
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    @include responsive-prop(font-size, 26, 32);
+  }
+
+  & > .call > .moment-current {
+    -ms-flex-order: 1;
+    order: 1;
+
+    padding-right: 0;
+
+    text-align: left;
+
+    @include large-up {
+      -ms-flex-order: 2;
+      order: 2;
+    }
+  }
+
+  & > p {
+    width: 100%;
+    @include responsive-prop(font-size, 22, 22);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: z-index(under);
+    top: 50%;
+    bottom: 0;
+    left: -9vw;
+
+    width: 100vw;
+
+    content: '';
+
+    background-color: $color-whitesmoke;
+  }
+}

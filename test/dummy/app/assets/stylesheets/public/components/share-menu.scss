@@ -1,0 +1,143 @@
+.share-menu {
+  $size: 11;
+
+  font-weight: $font-weight-regular;
+
+  display: flex;
+  align-items: center;
+
+  color: $color-strong;
+  background-color: $color-wall;
+
+  @include responsive-prop(margin-top, 11, 11);
+  @include responsive-prop(padding-top, 25, 25);
+  @include responsive-prop(padding-right, 30, 30);
+  @include responsive-prop(padding-bottom, 25, 25);
+  @include responsive-prop(padding-left, 30, 30);
+  @include medium-down {
+    flex-direction: column;
+  }
+
+   > .socials {
+    display: flex;
+
+    @include medium-down {
+      @include responsive-prop(margin-top, 27, 27);
+    }
+  }
+
+   > .socials .facebook,
+   > .socials .twitter {
+    cursor: pointer;
+
+    border: 1px solid $color-strong;
+    border-radius: 50%;
+
+    @include responsive-prop(margin-left, 16, 16);
+    @include medium-down {
+      margin: 0;
+    }
+  }
+
+   > .socials .facebook:hover,
+   > .socials .twitter:hover {
+    border: 1px solid $color-brand;
+
+    &::before {
+      background-color: $color-brand;
+    }
+  }
+
+   > .socials .facebook:focus,
+   > .socials .twitter:focus {
+    outline: none;
+  }
+
+   > .socials .facebook::before,
+   > .socials .twitter::before {
+    display: block;
+
+    content: '';
+
+    background-color: $color-strong;
+
+    @include responsive-prop(width, 40, 40);
+    @include responsive-prop(height, 40, 40);
+  }
+
+   > .socials .twitter {
+    @include medium-down {
+      @include responsive-prop(margin-left, 30, 30);
+    }
+  }
+
+   > .socials .facebook::before {
+    @include mask-image(image_path('facebook.svg'));
+  }
+
+   > .socials .twitter::before {
+    @include mask-image(image_path('twitter.svg'));
+  }
+
+  &.-side {
+    font-family: $font-family-roboto;
+    font-weight: $font-weight-medium;
+
+    position: fixed;
+
+    flex-wrap: wrap;
+
+    margin-left: 0;
+    padding: 0;
+
+    text-transform: uppercase;
+
+    color: $color-light;
+    background-color: transparent;
+
+    @include responsive-prop(font-size, $size, $size);
+    @include responsive-prop(max-width, 100, 100);
+  }
+
+  &.-side > .socials {
+    flex-direction: column;
+
+    @include responsive-prop(margin-bottom, 8, 8);
+  }
+
+  &.-side > .socials .facebook,
+  &.-side > .socials .twitter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+    background-color: transparent;
+
+    @include responsive-prop(width, 40, 40);
+    @include responsive-prop(height, 40, 40);
+    @include responsive-prop(margin-top, 8, 8);
+  }
+
+  &.-side > .socials .facebook::before,
+  &.-side > .socials .twitter::before {
+    display: block;
+
+    content: '';
+
+    background-color: $color-strong;
+
+    @include responsive-prop(width, 40, 40);
+    @include responsive-prop(height, 40, 40);
+  }
+
+  &.-side > .socials .facebook:hover,
+  &.-side > .socials .twitter:hover {
+    border: 1px solid $color-brand;
+  }
+
+  &.-side > .socials .facebook:hover::before,
+  &.-side > .socials .twitter:hover::before {
+    background-color: $color-brand;
+  }
+}

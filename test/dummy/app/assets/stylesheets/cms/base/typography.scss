@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+body {
+  font-family: $font-family-open-sans;
+  font-size: $font-size-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  font-family: $font-family-gilroy;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3,
+h4,
+h5,
+h6, {
+  font-size: 32px;
+}

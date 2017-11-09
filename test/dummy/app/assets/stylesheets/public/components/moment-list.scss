@@ -1,0 +1,185 @@
+.moment-list {
+  $size-title: 72;
+  $size-title-mobile: 52;
+  $size-text: 26;
+  $size-text-mobile: 22;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  & > .moment {
+    font-family: $font-family-gilroy;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: -1px;
+
+    transition: background-color .15s ease-in-out;
+
+    color: $color-bullfrog;
+    border-bottom: 1px solid $color-divisor;
+
+    @include responsive-prop(padding-top, 55);
+  }
+
+  & > .moment > .wrapper > .image {
+    pointer-events: none;
+  }
+
+  & > .moment:hover {
+    @include medium-up {
+      transition: none;
+    }
+  }
+
+  & > .moment:hover > .wrapper > .number,
+  & > .moment:hover > .wrapper > .content > .title,
+  & > .moment:hover > .wrapper > .content > .description,
+  & > .moment:hover > .wrapper > .content > .description > b {
+    @include medium-up {
+      color: #FFF;
+    }
+  }
+
+  & > .moment.-inquietacao {
+    & > .wrapper > .image > img {
+      @include responsive-prop(width, 259, 259);
+    }
+
+    &:hover {
+      @include medium-up {
+        background-color: $color-moment-inquietacao;
+      }
+    }
+  }
+
+  & > .moment.-caos {
+    & > .wrapper > .image > img {
+      @include responsive-prop(width, 225, 225);
+    }
+
+    &:hover {
+      @include medium-up {
+        background-color: $color-moment-caos;
+      }
+    }
+  }
+
+  & > .moment.-abertura {
+    & > .wrapper > .image > img {
+      @include responsive-prop(width, 142, 142);
+    }
+
+    &:hover {
+      @include medium-up {
+        background-color: $color-moment-abertura;
+      }
+    }
+  }
+
+  & > .moment.-preparacao {
+    & > .wrapper > .image > img {
+      @include responsive-prop(width, 262, 262);
+    }
+
+    &:hover {
+      @include medium-up {
+        background-color: $color-moment-preparacao;
+      }
+    }
+  }
+
+  & > .moment.-mudanca {
+    & > .wrapper > .image > img {
+      @include responsive-prop(width, 393, 393);
+    }
+
+    &:hover {
+      @include medium-up {
+        background-color: $color-moment-mudanca;
+      }
+    }
+  }
+
+  & > .moment > .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+
+    @include medium-up {
+      flex-direction: row;
+    }
+  }
+
+  & > .moment > .wrapper > .image {
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    flex: 4;
+    justify-content: center;
+
+    @include responsive-prop(margin-top, 32);
+    @include responsive-prop(width, 480, 480);
+    @include small-only {
+      align-self: center;
+    }
+  }
+
+  & > .moment > .wrapper > .content {
+    flex: 7;
+
+    width: 100%;
+
+    @include large-up {
+      margin: 3em 0;
+    }
+  }
+
+  & > .moment > .wrapper > .content > .title {
+    font-weight: $font-weight-bold;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+    @include small-only {
+      letter-spacing: -1px;
+    }
+  }
+
+  & > .moment > .wrapper > .number,
+  & > .moment > .wrapper > .content > .description {
+    @include responsive-prop(font-size, $size-text-mobile, $size-text);
+  }
+
+  & > .moment > .wrapper > .number {
+    font-weight: $font-weight-bold;
+
+    align-self: flex-start;
+    flex: 1;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(margin-top, 0, 60);
+    @include small-only {
+      display: none;
+    }
+  }
+
+  & > .moment > .wrapper > .content > .description {
+    font-weight: $font-weight-regular;
+
+    color: $color-strong;
+
+    @include responsive-prop(margin-top, 16, 16);
+  }
+
+  & > .moment > .wrapper > .content > .description > b {
+    font-weight: $font-weight-bold;
+
+    color: $color-bullfrog;
+  }
+}

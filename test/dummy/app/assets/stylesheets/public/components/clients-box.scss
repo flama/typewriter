@@ -1,0 +1,88 @@
+.clients-box {
+  $size-title: 32;
+  $size-title-mobile: 24;
+
+  position: relative;
+
+  width: 100%;
+
+  background-color: #FFF;
+
+
+  & > .title {
+    font-family: $font-family-gilroy;
+    font-weight: $font-weight-bold;
+
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: $color-bullfrog;
+
+    @include responsive-prop(font-size, $size-title-mobile, $size-title);
+    @include responsive-prop(line-height, 33, 54);
+    @include small-only {
+      text-align: left;
+    }
+  }
+
+  & > .clients {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 82vw;
+    margin: 0 auto;
+
+    @include responsive-prop(margin-top, 0, 26);
+    @include medium-only {
+      width: 65vw;
+    }
+    @include small-only {
+      flex-wrap: wrap;
+      @include responsive-prop(margin-top, -10);
+      @include responsive-prop(margin-left, -8);
+    }
+  }
+
+  & > .clients > .client {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include responsive-prop(width, 150, 200);
+    @include responsive-prop(height, 110, 140);
+    @include small-only {
+      flex-basis: 30%;
+      @include small-only {
+        @include responsive-prop(margin-bottom, -40);
+      }
+    }
+  }
+
+  & > .clients > .client:last-child {
+    @include small-only {
+      margin-right: auto;
+      @include responsive-prop(margin-left, 18, -20);
+    }
+  }
+
+  & > .clients > .client.-boticario {
+    background-image: url(image_path('home/logo-boticario.svg'));
+  }
+
+  & > .clients > .client.-wallmart {
+    background-image: url(image_path('home/logo-wallmart.svg'));
+  }
+
+  & > .clients > .client.-itau {
+    background-image: url(image_path('home/logo-itau.svg'));
+  }
+
+  & > .clients > .client.-renner {
+    background-image: url(image_path('home/logo-renner.svg'));
+  }
+
+  & > .clients > .client.-bradesco {
+    background-image: url(image_path('home/logo-bradesco.svg'));
+  }
+}

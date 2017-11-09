@@ -1,0 +1,14 @@
+<% content_for :sub_navbar do %>
+  <div class="actions">
+    <%= link_to 'Editar', edit_article_path(@article), class: 'button -outline' %>
+  </div>
+<% end %>
+
+<div class="page-moment" style="padding-top: 70px">
+  <article class="article-section">
+
+    <h1><%= ensure_default @article.title %></h1>
+    <%= @article.body %>
+
+  </article>
+</div>
