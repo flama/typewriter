@@ -1,6 +1,6 @@
 {
   "name": "@flama.is/typewriter",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Content editor for CMS creators",
   "license": "MIT",
   "main": "dist/index.js",
