@@ -21,13 +21,6 @@ import Embed from '../plugins/embed'
 import Image from '../plugins/image'
 
 export default class RichText extends Component {
-  defaultProps = {
-    onChange: (_ => _),
-    presignFrom: null,
-    uploadTo: null,
-    captions: {},
-  }
-
   emptyState = {
     document: {
       nodes: [
@@ -99,4 +92,11 @@ export default class RichText extends Component {
       </div>
     )
   }
+}
+
+RichText.defaultProps = {
+  onChange: (_ => _),
+  presignFrom: null,
+  uploadTo: null,
+  captions: {},
 }
