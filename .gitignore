@@ -23,5 +23,6 @@ gems/*
 
 .env
 test/dummy/.env
+test/dummy/db/*.sqlite3
 
 Gemfile.lock

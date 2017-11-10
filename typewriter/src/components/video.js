@@ -33,9 +33,6 @@ export default class Video extends Component {
           className="embed"
           src={this.currentUrl()}
           frameBorder="0"
-          style={{
-            width: '54.16vw',
-          }}
         />
       </div>
     )
