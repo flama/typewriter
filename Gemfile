@@ -10,4 +10,4 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-gem 'nanofile', github: 'flama/nanofile', branch: 'develop'
+gem 'nanofile', github: 'flama/nanofile'
