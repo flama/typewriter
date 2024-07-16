@@ -23,11 +23,26 @@ import Image from '../plugins/image'
 export default class RichText extends Component {
   emptyState = {
     document: {
+      data: { },
+      kind: "document",
       nodes: [
         {
-          kind: 'block',
-          type: 'paragraph',
-          nodes: []
+          data: {},
+          kind: "block",
+          isVoid: false,
+          type: "paragraph",
+          "nodes": [
+            {
+              kind: "text",
+              leaves: [
+                {
+                  kind: "leaf",
+                  marks: [],
+                  text: ""
+                }
+              ]
+            }
+          ]
         }
       ]
     }
