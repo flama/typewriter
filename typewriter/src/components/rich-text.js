@@ -49,7 +49,7 @@ export default class RichText extends Component {
   }
 
   state = {
-    editorState: State.fromJSON(tryAsJson(this.props.content) || this.emptyState),
+    editorState: State.fromJSON(this.emptyState),
   }
 
   plugins = [
@@ -78,7 +78,6 @@ export default class RichText extends Component {
 
   onChange = ({ state }) => {
     this.props.onChange(JSON.stringify(state.toJSON()))
-    console.log("-------------***----------------------")
     this.setState({ editorState: state })
   }
 
