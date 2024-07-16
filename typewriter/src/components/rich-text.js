@@ -38,7 +38,7 @@ export default class RichText extends Component {
                 {
                   kind: "leaf",
                   marks: [],
-                  text: ""
+                  text: "Teste do RichText"
                 }
               ]
             }
