@@ -78,6 +78,7 @@ export default class RichText extends Component {
 
   onChange = ({ state }) => {
     this.props.onChange(JSON.stringify(state.toJSON()))
+    console.log("-------------***----------------------")
     this.setState({ editorState: state })
   }
 
